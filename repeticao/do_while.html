@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // A variável x é inicializada com o valor 11
+        let x = 11;
+
+        /* Estrutura de repetição 'do...while':
+           - O bloco 'do' sempre executa pelo menos uma vez, independente da condição.
+           - Após a execução do bloco, a condição no 'while' é verificada.
+           - Se a condição for verdadeira, o bloco será executado novamente.
+           - Se a condição for falsa, o loop termina. */
+
+        do {
+            // Exibe o valor atual de 'x' no documento, seguido por uma quebra de linha
+            document.write(x + '<br />');
+
+            //break
+            // A palavra-chave 'break' pode ser usada aqui para sair do loop imediatamente.
+            
+            //continue
+            // A palavra-chave 'continue' pula a iteração atual e vai para a próxima, mas só faz sentido no contexto de um loop com múltiplas iterações.
+            
+        } while(x <= 10); // A condição é verificada após a execução do bloco 'do'.
+
+        // Neste exemplo, 'x' começa em 11, então o bloco 'do' executa uma vez,
+        // mas como 11 não é menor ou igual a 10, o loop termina após a primeira execução.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

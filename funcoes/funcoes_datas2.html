@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <title>JavaScript</title> <!-- Título da aba do navegador -->
+    <script>
+      // Cria uma nova instância de Date com a data e hora atuais
+      let data = new Date();
+
+      /*
+      // Exibe a data formatada como dia/mês/ano
+      document.write(
+        data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()
+      ); 
+
+      // Exemplo de saída: 25 / 09 / 2024
+
+      // Adicionar / remover dias
+      document.write(data.toString()); // Mostra a data atual
+      data.setDate(data.getDate() + 1); // Adiciona 1 dia à data atual
+      document.write("<hr />"); // Adiciona uma linha horizontal
+      document.write(data.toString()); // Mostra a nova data
+      document.write("<br /><br /><hr />");
+
+      // Adicionar / remover meses
+      document.write(data.toString()); // Mostra a data atual
+      data.setMonth(data.getMonth() + 1); // Adiciona 1 mês à data atual
+      document.write("<hr />"); // Adiciona uma linha horizontal
+      document.write(data.toString()); // Mostra a nova data
+      document.write("<br /><br /><hr />");
+
+      // Adicionar / remover anos
+      document.write(data.toString()); // Mostra a data atual
+      data.setFullYear(data.getFullYear() + 1); // Adiciona 1 ano à data atual
+      document.write("<hr />"); // Adiciona uma linha horizontal
+      document.write(data.toString()); // Mostra a nova data
+      */
+
+      // Cria um objeto Date para 21 de julho de 2002
+      let data1 = new Date(2002, 6, 21); // Meses começam em 0 (julho é 6)
+
+      // Cria um objeto Date para 7 de dezembro de 2005
+      let data2 = new Date(2005, 11, 7); // Dezembro é 11
+
+      document.write(data1.toString()); // Exibe data1
+      document.write("<hr />"); // Adiciona uma linha horizontal
+      document.write(data2.toString()); // Exibe data2
+
+      document.write("<br /><br /><hr />");
+      // Converter datas para milissegundos para cálculos
+      document.write(data1.getTime()); // Exibe milissegundos desde 1 de janeiro de 1970 para data1
+      document.write("<hr />");
+      document.write(data2.getTime()); // Exibe milissegundos desde 1 de janeiro de 1970 para data2
+
+      // Exibe a referência de tempo a partir de 1 de janeiro de 1970
+
+      document.write("<br /><br /><hr />");
+      // Encontra a quantidade de milissegundos entre data1 e data2
+      let milissegundos_entre_datas = Math.abs(
+        data1.getTime() - data2.getTime() // Calcula a diferença em milissegundos
+      );
+
+      // 1 dia tem 24h, cada hora tem 60 minutos, cada minuto tem 60 segundos e cada segundo tem 1000 milissegundos
+      // Então quantos milissegundos existem em um dia?
+      let milissegundos_por_dia = 1 * 24 * 60 * 60 * 1000; // Calcula milissegundos em um dia
+      document.write("1 dia tem: " + milissegundos_por_dia + " milissegundos"); // Exibe a quantidade de milissegundos em um dia
+
+      document.write("<br /><br /><hr />");
+      // Exibe a diferença em dias entre data1 e data2
+      document.write('A diferença entre data1 e data2 é de: ' + Math.ceil(milissegundos_entre_datas / milissegundos_por_dia) + ' dia(s)');
+    </script>
+  </head>
+
+  <body></body> <!-- Corpo do documento, vazio neste caso -->
+</html>

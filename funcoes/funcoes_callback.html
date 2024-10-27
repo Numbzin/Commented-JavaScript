@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade em dispositivos móveis -->
+    <title>Documento</title> <!-- Título da aba do navegador -->
+  </head>
+  <body>
+    <script>
+      // Função que simula a recuperação de um artigo pelo ID
+      function exibirArtigo(id, callbackSucesso, callbackErro) {
+        // Lógica: recuperar o id via requisição HTTP (simulado aqui)
+        if (false) { // Simula condição de sucesso ou erro (aqui sempre é falso)
+          // Chama a função de sucesso passando título e descrição
+          callbackSucesso(
+            "Funções de Callback em JS", // Título do artigo
+            "Funções de callback são muito utilizadas..." // Descrição do artigo
+          );
+        } else {
+          // Chama a função de erro passando a mensagem de erro
+          callbackErro("Erro ao recuperar os dados");
+        }
+      }
+
+      // Função de callback que exibe o artigo na página
+      let callbackSucesso = function (titulo, desc) {
+        document.write("<h1>" + titulo + "</h1>"); // Exibe o título como um cabeçalho
+        document.write("<hr />"); // Adiciona uma linha horizontal
+        document.write("<p>" + desc + "</p>"); // Exibe a descrição em um parágrafo
+      };
+
+      // Função de callback que exibe uma mensagem de erro
+      let callbackErro = function (erro) {
+        document.write('<p><b>Erro: </b>' + erro + '</p>'); // Exibe a mensagem de erro em negrito
+      };
+
+      // Chama a função exibirArtigo passando o ID e as funções de callback
+      exibirArtigo(1, callbackSucesso, callbackErro);
+    </script>
+  </body>
+</html>

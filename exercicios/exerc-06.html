@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        Desenvolva uma função que verifica se duas strings são anagramas.
+        Duas palavras são consideradas anagramas se contêm as mesmas letras na mesma quantidade, mas em ordens diferentes.
+        A função deve:
+        1. Receber duas strings como parâmetros.
+        2. Retornar true se forem anagramas e false caso contrário.
+        3. Utilize métodos de string e array para realizar a verificação.
+
+        Neste exemplo, as strings 'perda' e 'pedra' são fornecidas para teste.
+        */
+
+        const s1 = 'perda';
+        const s2 = 'pedra';
+
+        function SaoAnagramas(s1, s2) {
+            if (s1.length !== s2.length) {
+                return false;
+            }
+            const sortedS1 = s1.split('').sort().join('');
+            const sortedS2 = s2.split('').sort().join('');
+
+            return sortedS1 === sortedS2;
+        }
+
+        document.write(SaoAnagramas(s1, s2));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

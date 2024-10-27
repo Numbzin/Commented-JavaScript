@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+
+    <script></script> <!-- Espaço reservado para incluir scripts JavaScript adicionais -->
+  </head>
+
+  <body>
+    <!-- Campo de entrada de texto -->
+    <input
+      onfocus="console.log('recebeu o foco')" <!-- Evento que é acionado quando o campo recebe o foco -->
+      onblur="console.log('perdeu o foco')" <!-- Evento que é acionado quando o campo perde o foco -->
+      type="text"
+    />
+
+    <!-- Menu suspenso (select) com opções -->
+    <select onchange="console.log('Estado foi modificado')"> <!-- Evento que é acionado quando a opção selecionada é alterada -->
+      <option>-- Selecione --</option> <!-- Opção padrão que solicita ao usuário selecionar uma opção -->
+      <option value="1">Primeira opção</option> <!-- Primeira opção do menu -->
+      <option value="2">Segunda opção</option> <!-- Segunda opção do menu -->
+    </select>
+  </body>
+</html>

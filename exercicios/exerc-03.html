@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um programa que calcula o Índice de Massa Corporal (IMC) de uma pessoa.
+        O programa deve solicitar o nome, altura (em centímetros) e peso (em quilos) do usuário.
+        Em seguida, calcule o IMC e classifique-o conforme as seguintes categorias:
+        - Baixo peso muito grave: IMC < 16
+        - Baixo peso grave: 16 <= IMC < 17
+        - Baixo peso: 17 <= IMC < 18.5
+        - Peso normal: 18.5 <= IMC < 25
+        - Sobrepeso: 25 <= IMC < 30
+        - Obesidade grau I: 30 <= IMC < 35
+        - Obesidade grau II: 35 <= IMC < 40
+        - Obesidade grau III: IMC >= 40
+        Exiba o resultado com o nome da pessoa, seu IMC e a classificação.
+        */
+
+        // Solicita o nome da pessoa
+        let nome = prompt("Informe o seu nome:");
+
+        // Solicita a altura em centímetros e converte para float
+        let alturaCm = parseFloat(prompt("Informe sua altura em centímetros:"));
+
+        // Converte a altura para metros
+        let alturaM = alturaCm / 100;
+
+        // Solicita o peso e converte para float
+        let peso = parseFloat(prompt("Informe o seu peso em quilos:"));
+
+        // Calcula o índice de massa corporal (IMC)
+        let imc = peso / (alturaM * alturaM);
+
+        // Classifica o IMC de acordo com os critérios fornecidos
+        let classificacao = "";
+
+        if (imc < 16) {
+            classificacao = "Baixo peso muito grave";
+        } else if (imc >= 16 && imc < 17) {
+            classificacao = "Baixo peso grave";
+        } else if (imc >= 17 && imc < 18.5) {
+            classificacao = "Baixo peso";
+        } else if (imc >= 18.5 && imc < 25) {
+            classificacao = "Peso normal";
+        } else if (imc >= 25 && imc < 30) {
+            classificacao = "Sobrepeso";
+        } else if (imc >= 30 && imc < 35) {
+            classificacao = "Obesidade grau I";
+        } else if (imc >= 35 && imc < 40) {
+            classificacao = "Obesidade grau II";
+        } else {
+            classificacao = "Obesidade grau III";
+        }
+
+        // Exibe o resultado para o usuário
+        document.write(
+            `${nome} possui índice de massa corporal igual a ${imc.toFixed(
+                2
+            )}, sendo classificado como: ${classificacao}.`
+        );
+    </script>
+</body>
+</html>

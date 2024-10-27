@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Solicita ao usuário que insira a nota do aluno e armazena na variável 'nota'.
+      // A função 'prompt' exibe uma janela de diálogo onde o usuário pode inserir um valor.
+      let nota = prompt("Digite a nota do aluno:");
+
+      // Define a variável 'media' com o valor 7, que representa a média mínima necessária para aprovação.
+      let media = 7;
+
+      // Estrutura de controle 'if-else' para verificar a situação do aluno.
+      // A condição 'if' verifica se a nota é maior ou igual à média.
+      if (nota >= media) {
+        // Se a condição for verdadeira, exibe "aprovado" no documento.
+        document.write("Aprovado");
+      } else {
+        // Se a condição for falsa (nota menor que a média), exibe "reprovado" no documento.
+        document.write("Reprovado");
+      }
+    </script>
+  </body>
+</html>

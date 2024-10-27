@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+  <script>
+    // Inicializa um array para armazenar frutas
+    let lista_frutas = Array();
+
+    // Adiciona frutas ao array
+    lista_frutas[0] = 'Banana';
+    lista_frutas[1] = 'Maçã'; // Corrigido 'Maça' para 'Maçã'
+    lista_frutas[2] = 'Morango';
+    lista_frutas[3] = 'Uva';
+
+    // Exibe a posição do elemento 'Morango' no console (deve retornar 2)
+    console.log(lista_frutas.indexOf('Morango'));
+
+    // Exibe a posição do elemento 'Abacaxi' no console (deve retornar -1, pois não existe)
+    console.log(lista_frutas.indexOf('Abacaxi')); //retorna -1
+
+    // Armazena a posição da fruta 'Banana' em uma variável
+    let auxiliar = lista_frutas.indexOf('Banana');
+
+    // Verifica se a fruta existe no array
+    if (auxiliar === -1) {
+      console.log('Elemento não existe');
+    } else {
+      console.log('Elemento existe e está na posição ' + auxiliar); // Exibe a posição da 'Banana'
+    }
+
+    // Lembre-se, a pesquisa é case sensitive!
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

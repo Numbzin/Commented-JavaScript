@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Solicita os valores e converte para números
+      let num1 = Number(prompt('Digite o valor de num1:')); // Converte a entrada para um número
+      let num2 = Number(prompt('Digite o valor de num2:')); // Converte a entrada para um número
+
+      // Verifica se as entradas são números válidos
+      if (isNaN(num1) || isNaN(num2)) { // isNaN verifica se o valor não é um número
+        document.write('Por favor, insira valores numéricos válidos.'); // Mensagem de erro se não for um número
+      } else {
+        // Realiza as operações matemáticas
+        // adição (+)
+        document.write(`A soma entre ${num1} e ${num2} é: ${num1 + num2} <br>`); // Exibe a soma
+        // subtração (-)
+        document.write(`A subtração entre ${num1} e ${num2} é: ${num1 - num2} <br>`); // Exibe a subtração
+        // multiplicação (*)
+        document.write(`A multiplicação entre ${num1} e ${num2} é: ${num1 * num2} <br>`); // Exibe a multiplicação
+        // divisão (/)
+        document.write(`A divisão entre ${num1} e ${num2} é: ${num1 / num2} <br>`); // Exibe a divisão
+        // Módulo (%) - Resto existente em uma operação de divisão
+        document.write(`O módulo entre ${num1} e ${num2} é: ${num1 % num2} <br>`); // Exibe o resto da divisão
+        
+        // Incremento e decremento, usando variáveis separadas
+        let increment = num1 + 1; // Incrementa num1 em 1
+        let decrement = num1 - 1; // Decrementa num1 em 1
+
+        document.write(`O incremento de ${num1} é: ${increment} <br>`); // Exibe o incremento
+        document.write(`O decremento de ${num1} é: ${decrement} <br>`); // Exibe o decremento
+      }
+
+      // Exemplos de operações usando um valor de teste
+      // let teste = 10; // Valor inicial
+      /*
+      let teste = 'Opa, '; // String inicial
+
+      teste = teste + 5; // Concatena 5 à string
+      teste += 5; // Concatena 5 à string novamente
+      teste -= 5; // Subtrai 5 da string, resultando em NaN (não é um número)
+      teste *= 5; // Multiplica NaN por 5, resultando em NaN
+      teste /= 2; // Divide NaN por 2, resultando em NaN
+      teste %= 3; // Aplica o módulo sobre NaN, resultando em NaN
+      teste += 'NMB'; // Concatena 'NMB' à string NaN, resultando em 'NaN NMB'
+      document.write(teste); // Exibe o resultado
+      */
+
+      // () - aplicar precedência
+      // 1 - multiplicação e subtração
+      // 2 - soma e subtração
+
+      // Exemplo de precedência de operadores:
+      // A operação será realizada na seguinte ordem: multiplicação -> subtração -> soma
+      document.write(11 + 5 - 5 * 2 / 2); // Resultado das operações com precedência
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Definindo a variável 'parametro' com o valor 2.
+      let parametro = 2;
+
+      // Estrutura de controle 'switch' para avaliar a variável 'parametro'.
+      // O 'switch' permite testar um valor contra vários casos possíveis.
+      switch (parametro) {
+        // Caso 'parametro' seja igual a 1, executa o código abaixo:
+        case 1:
+          document.write("Parametro 1");
+          // O 'break' interrompe a execução do 'switch' após encontrar um caso correspondente.
+          break;
+
+        // Caso 'parametro' seja igual a 2, executa o código abaixo:
+        case 2:
+          document.write("Parametro 2");
+          // O 'break' é importante para evitar que outros casos sejam executados.
+          break;
+
+        // Caso nenhum dos casos acima corresponda ao valor de 'parametro',
+        // executa o código no bloco 'default'.
+        default:
+          document.write("Default");
+      }
+    </script>
+  </body>
+</html>

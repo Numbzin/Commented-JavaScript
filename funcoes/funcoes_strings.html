@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Propriedade length: retorna o comprimento da string
+      document.write('Jorge Sant Ana'.length); // Exibe: 13
+      
+      // charAt: retorna o caractere na posição especificada
+      document.write('Jorge Sant Ana'.charAt(7)); // Exibe: 'S'
+
+      let nome = 'Jorge Sant Ana'; // Define a variável nome com a string 'Jorge Sant Ana'
+
+      // indexOf: retorna a posição da primeira ocorrência de uma substring
+      document.write(nome.indexOf('g')); // Exibe: 1 (posição da letra 'g')
+
+      // replace: substitui a primeira ocorrência da substring especificada
+      document.write(nome.replace('Sant Ana', 'Silva')); // Exibe: 'Jorge Silva'
+
+      // substr: retorna uma parte da string a partir de um índice inicial e com um comprimento específico
+      document.write(nome.substr(6, 4)); // Exibe: 'Sant' (4 caracteres a partir do índice 6)
+
+      // toLocaleLowerCase: converte a string para minúsculas
+      document.write(nome.toLocaleLowerCase()); // Exibe: 'jorge sant ana'
+      
+      // toLocaleUpperCase: converte a string para maiúsculas
+      document.write(nome.toLocaleUpperCase()); // Exibe: 'JORGE SANT ANA'
+
+      // trim: remove espaços em branco do início e do fim da string
+      document.write('-' + nome.trim() + '-'); // Exibe: '-Jorge Sant Ana-'
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

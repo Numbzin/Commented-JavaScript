@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+      // Gera um número aleatório entre 0 e 1
+      let x = Math.random();
+      document.write(x);
+
+      // Função para gerar um número aleatório em um intervalo específico
+      function gerarNumeroAleatorio(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(2);
+      }
+
+      // Gerar um número aleatório entre 1 e 100
+      let numeroAleatorio = gerarNumeroAleatorio(1, 100);
+
+      // Exibir o número aleatório na página
+      document.write("Número Aleatório: " + numeroAleatorio);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Solicita a nota do aluno através de um prompt e converte para um número decimal
+      let nota = parseFloat(prompt('Digite a nota do aluno:'));
+      // Define a nota mínima necessária para aprovação
+      let media = 7; 
+
+      // Verifica se a entrada do usuário é um número válido
+      if (isNaN(nota)) {
+        // Informa ao usuário que a entrada não é um número válido
+        document.write('Por favor, insira um número válido para a nota.');
+      } else if (nota < 0 || nota > 10) {
+        // Informa ao usuário que a nota deve estar dentro do intervalo esperado
+        document.write('A nota deve estar entre 0 e 10.');
+      } else {
+        // Compara a nota do aluno com a média definida
+        if (nota >= media) {
+          // Se a nota é maior ou igual à média, o aluno é aprovado
+          document.write('Aprovado');
+        } else { 
+          // Se a nota é menor que a média, o aluno é reprovado
+          document.write('Reprovado');
+        }
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

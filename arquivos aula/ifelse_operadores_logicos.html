@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Exemplo de uso de operadores lógicos
+      // false = false
+      /*
+      if(!(5 >= 2)) {
+        document.write('Verdadeiro') // Esta linha nunca será executada, pois 5 é maior que 2
+      } else {
+        document.write('Falso')
+      }
+      */
+
+      // Solicita a nota do aluno e a quantidade de faltas
+      let nota = prompt('Digite a nota do aluno:');
+      let faltas = prompt('Digite a quantidade de faltas:');
+
+      // Define a média mínima para aprovação e o limite de faltas
+      let media = 7;
+      let faltas_maximas = 15;
+
+      // Verifica se a nota é maior ou igual à média e se as faltas estão dentro do limite
+      if (nota >= media && faltas <= faltas_maximas) {
+        // Se ambas as condições forem verdadeiras, o aluno é aprovado
+        document.write('Aprovado');
+      } else { 
+        // Se qualquer uma das condições for falsa, o aluno é reprovado
+        document.write('Reprovado');
+      }
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

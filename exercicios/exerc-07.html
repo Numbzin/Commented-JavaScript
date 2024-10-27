@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <!-- Campo para entrada de texto, onde o usuário pode digitar um objeto -->
+      <input type="text" id="objeto" placeholder="Digite um objeto" />
+      <!-- Botão para adicionar o objeto digitado ao Array -->
+      <button onclick="adicionarObjetos()">Adicionar</button>
+      <!-- Botão para ordenar os objetos já adicionados no Array -->
+      <button onclick="ordenarObjetos()">Ordenar</button>
+    </div>
+  </body>
+
+  <script>
+    /*
+    1) Crie uma aplicação web com um campo de entrada de texto (input) e dois botões (Adicionar e Ordenar).
+    2) Inicie um Array chamado 'objetos' com os valores iniciais: "Cadeira", "Impressora", "Garfo".
+    */
+
+    let objetos = Array("Cadeira", "Impressora", "Garfo");
+
+    /*
+    A) Função para adicionar objetos ao Array:
+    - Ao clicar no botão "Adicionar":
+        1. Recuperar o valor do campo de texto.
+        2. Verificar se o campo está vazio:
+            - Se estiver vazio, mostrar um alerta pedindo um valor válido.
+        3. Se o campo estiver preenchido:
+            - Verificar se o valor já existe no Array 'objetos' (ignorando diferenças de maiúsculas e minúsculas).
+            - Se existir, mostrar um alerta informando que o objeto já foi adicionado.
+            - Se não existir:
+                - Adicionar o objeto ao Array.
+                - Exibir o Array atualizado no console para depuração.
+                - Limpar o campo de entrada de texto.
+    */
+    function adicionarObjetos() {
+      // Recupera o valor do campo de texto, removendo espaços em branco
+      let objeto = document.getElementById("objeto").value.trim();
+
+      // Verifica se o valor do campo de texto não está vazio
+      if (objeto !== "") {
+        // Verifica se o objeto já existe no Array 'objetos' (ignorando diferenças de maiúsculas e minúsculas)
+        if (objetos.some(item => item.toLowerCase() === objeto.toLowerCase())) {
+          alert("Objeto já foi adicionado");
+        } else {
+          // Adiciona o novo objeto ao Array e imprime o Array atualizado no console
+          objetos.push(objeto);
+          console.log(objetos);
+
+          // Limpa o campo de entrada de texto para nova entrada
+          document.getElementById("objeto").value = "";
+        }
+      } else {
+        alert("Informe um valor válido");
+      }
+    }
+
+    /*
+    B) Função para ordenar objetos:
+    - Ao clicar no botão "Ordenar":
+        1. Ordenar os objetos do Array em ordem alfabética (ignorando maiúsculas e minúsculas).
+        2. Exibir o Array ordenado no console para depuração.
+    */
+    function ordenarObjetos() {
+      // Ordena o Array 'objetos' em ordem alfabética
+      objetos.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      // Imprime o Array ordenado no console para verificação
+      console.log(objetos);
+    }
+  </script>
+</html>

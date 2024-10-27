@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Função que distribui o caractere digitado em números e letras
+      function distribuiCaracter() {
+        // Recupera o valor do campo de entrada
+        let caracter = document.getElementById("entrada").value;
+        
+        // Limpa o campo de entrada após recuperar o valor
+        document.getElementById("entrada").value = "";
+
+        // Remove espaços em branco do início e do fim do caractere
+        caracter = caracter.trim();
+
+        // Verifica se o caractere é um número
+        switch (caracter) {
+          case "0":
+          case "1":
+          case "2":
+          case "3":
+          case "4":
+          case "5":
+          case "6":
+          case "7":
+          case "8":
+          case "9":
+            // Se for número, adiciona ao campo de números
+            document.getElementById("numeros").value += caracter;
+            break;
+          default:
+            // Se não for número, adiciona ao campo de letras
+            document.getElementById("letras").value += caracter;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      id="entrada"
+      type="text"
+      placeholder="Digite um caracter aqui"
+      onkeyup="distribuiCaracter()"
+    />
+
+    <hr />
+    <span>Letras:</span>
+    <input id="letras" type="text" />
+
+    <span>Números:</span>
+    <input id="numeros" type="text" disabled="disabled" />
+    <script></script>
+  </body>
+</html>

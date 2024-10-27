@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // A variável x é inicializada com o valor 1
+      let x = 1;
+
+      // Exibe o texto "inicio" no documento, seguido por uma quebra de linha
+      document.write("inicio" + "<br />");
+
+      /* Estrutura de repetição 'while':
+         - O loop 'while' verifica a condição antes de executar o bloco de código.
+         - Se a condição for verdadeira, o bloco será executado.
+         - Se a condição for falsa, o loop termina e não executa o bloco.
+      */
+
+      while (x <= 10) {
+        // Incrementa o valor de 'x' em 1 a cada iteração
+        x++;
+
+        // Verifica se 'x' é igual a 5
+        if (x === 5) {
+          // 'continue' faz o loop pular a iteração atual e ir para a próxima
+          // Neste caso, quando 'x' é igual a 5, o código abaixo é ignorado.
+          continue;
+        }
+
+        // Exibe o valor atual de 'x' no documento, seguido por uma quebra de linha
+        document.write(x + "<br />");
+      }
+
+      // Exibe o texto "fim" no documento, seguido por uma quebra de linha
+      document.write("fim <br />");
+    </script>
+  </head>
+  <body></body>
+</html>

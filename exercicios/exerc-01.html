@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Faixa Etária</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um programa que solicita a idade do usuário e classifica a faixa etária em:
+        - Criança (menos de 13 anos)
+        - Adolescente (13 a 17 anos)
+        - Adulto (18 a 59 anos)
+        - Idoso (60 anos ou mais)
+        Exiba a faixa etária correspondente ao usuário.
+        */
+
+        // entrada
+        let idade = parseInt(prompt('Digite sua idade:'));
+        let mensagem;
+
+        // processamento
+        if (idade < 13) {
+            mensagem = 'Criança';
+        } else if (idade >= 13 && idade <= 17) {
+            mensagem = 'Adolescente';
+        } else if (idade >= 18 && idade <= 59) {
+            mensagem = 'Adulto';
+        } else {
+            mensagem = 'Idoso';
+        }
+
+        // saída
+        document.write(`Sua faixa etária é: ${mensagem}`);
+    </script>
+</body>
+</html>

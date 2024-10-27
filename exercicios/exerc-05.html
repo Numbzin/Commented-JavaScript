@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Foco no Input</title>
+    <style>
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Campo com Eventos</h1>
+    <input type="text" id="campoTexto" placeholder="Digite algo...">
+
+    <script>
+        /*
+        Crie um campo de entrada de texto que reaja a eventos de foco e perda de foco.
+        Quando o campo receber foco, altere a cor de fundo para amarelo.
+        Ao perder o foco, verifique o comprimento do texto inserido:
+        - Se o texto tiver menos de 3 caracteres, altere a cor de fundo para vermelho.
+        - Se o texto for válido (3 caracteres ou mais), retorne a cor de fundo ao normal.
+        */
+
+        const inputField = document.getElementById('campoTexto');
+
+        inputField.addEventListener('focus', function() {
+            inputField.style.backgroundColor = 'yellow';
+        });
+
+        inputField.addEventListener('blur', function() {
+            const inputValue = inputField.value.trim();
+
+            if (inputValue.length < 3) {
+                inputField.style.backgroundColor = 'red';
+            } else {
+                inputField.style.backgroundColor = '';
+            }
+        });
+    </script>
+</body>
+</html>

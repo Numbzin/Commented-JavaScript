@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Criação de um novo objeto de data
+      let data = new Date();
+
+      // Função para formatar o número com zero à esquerda
+      function formatarNumero(numero) {
+        return numero < 10 ? '0' + numero : numero;
+      }
+
+      // Formatação da data
+      let dia = formatarNumero(data.getDate());
+      let mes = formatarNumero(data.getMonth() + 1);
+      let ano = data.getFullYear();
+
+      // Criar um elemento para exibir a data
+      let dataFormatada = document.createElement('h1');
+      dataFormatada.textContent = dia + '/' + mes + '/' + ano;
+
+      // Adicionar o elemento ao corpo da página
+      document.body.appendChild(dataFormatada);
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // 3 escopos: global, função e bloco
+
+      let serie = 'Friends'; // Escopo global
+
+      // Escopo de bloco
+      if (true) {
+        let serie2 = 'Game of Thrones'; // Também se torna global por ser declarada com let
+        document.write(serie + '<br />'); // Acessa a variável global 'serie'
+      }
+
+      // Acessa 'serie2' que está no escopo global
+      document.write(serie2 + '<br />');
+
+      function x() {
+        let serie3 = 'The Walking Dead'; // Escopo da função
+        document.write(serie + '<br />'); // Acessa a variável global 'serie'
+        document.write(serie2 + '<br />'); // Acessa 'serie2' que está no escopo global
+      }
+
+      x(); // Chama a função x
+
+      // A tentativa de acessar 'serie3' aqui causará um erro, pois 'serie3' está no escopo da função 'x'.
+      // document.write(serie3); // Isso está comentado para evitar erro
+
+      // Exibindo uma mensagem de erro
+      document.write('Erro: serie3 não está acessível fora da função x. <br />');
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

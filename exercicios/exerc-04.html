@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um programa que realiza operações matemáticas simples: soma e subtração.
+        O programa deve solicitar ao usuário dois números e a operação desejada (somar ou subtrair).
+        Utilize uma função para realizar o cálculo com base nos números e na operação fornecida.
+        Exiba o resultado da operação na tela. Caso uma operação inválida seja informada, informe ao usuário.
+        */
+
+        let num1 = parseInt(prompt("Digite um número: ex: 21"));
+        let operacao = prompt("Diga se deseja somar ou subtrair?: ex: somar");
+        let num2 = parseInt(prompt("Digite o segundo número:"));
+
+        function calculos(num1, operacao, num2) {
+            if (operacao === "somar") {
+                return num1 + num2;
+            } else if (operacao === "subtrair") {
+                return num1 - num2;
+            } else {
+                return "Operação inválida"; // Caso uma operação diferente seja informada
+            }
+        }
+
+        document.write("O resultado é: " + calculos(num1, operacao, num2));
+    </script>
+</body>
+</html>

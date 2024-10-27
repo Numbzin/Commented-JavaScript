@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Função para calcular a área do terreno
+      function calcularAreaTerreno(largura, comprimento) {
+        // Lógica para calcular a área
+        let area = largura * comprimento;
+        return area; // Retorna o valor da área
+      }
+
+      // Solicita a largura e o comprimento do terreno
+      let largura = parseFloat(prompt('Digite a largura do terreno em metros'));
+      let comprimento = parseFloat(prompt('Digite o comprimento do terreno em metros'));
+
+      // Verifica se os valores são válidos
+      if (isNaN(largura) || isNaN(comprimento) || largura <= 0 || comprimento <= 0) {
+        document.write('Por favor, insira valores válidos para largura e comprimento.');
+      } else {
+        // Calcula a área chamando a função
+        let area = calcularAreaTerreno(largura, comprimento);
+        // Exibe a área calculada
+        document.write('O terreno possui ' + area.toFixed(2) + ' metros quadrados.');
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

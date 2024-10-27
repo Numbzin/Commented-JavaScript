@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      // Função que simula a recuperação de um artigo
+      function exibirArtigo(id, callbackSucesso, callbackErro) {
+        // Lógica: simula a recuperação do id via requisição http
+        if (false) { // Esta condição deve ser verdadeira para simular um sucesso
+          callbackSucesso('Funções de callback em JS', 'Funções de callback são muito utilizadas....');
+        } else {
+          callbackErro('Erro ao recuperar os dados');
+        }
+      }
+
+      // Callback para o caso de sucesso
+      let callbackSucesso = function(titulo, descricao) {
+        document.write('<h1>' + titulo + '</h1>');
+        document.write('<hr />');
+        document.write('<p>' + descricao + '</p>');
+      };
+
+      // Callback para o caso de erro
+      let callbackErro = function(erro) { 
+        document.write('<p><b>Erro:</b>' + erro + '</p>');
+      };
+
+      // Chamada da função, passando o id e os callbacks
+      exibirArtigo(1, callbackSucesso, callbackErro);
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

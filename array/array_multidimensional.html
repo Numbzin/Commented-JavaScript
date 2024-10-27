@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+
+    <script>
+      // Inicializa um array chamado lista_coisas
+      const lista_coisas = Array();
+
+      // Adiciona um array de frutas à lista_coisas
+      lista_coisas["frutas"] = Array("Banana", "Maçã", "Morango", "Uva");
+
+      // As linhas comentadas mostram como adicionar frutas manualmente
+      // lista_coisas['frutas'][1] = 'Banana'
+      // lista_coisas['frutas'][2] = 'Maçã'
+      // lista_coisas['frutas'][3] = 'Morango'
+      // lista_coisas['frutas'][4] = 'Uva'
+
+      // Adiciona um array para pessoas
+      lista_coisas["pessoas"] = [];
+      lista_coisas["pessoas"]["a"] = "João"; // Adiciona 'João' na chave 'a'
+      lista_coisas["pessoas"]["b"] = "José"; // Adiciona 'José' na chave 'b'
+      lista_coisas["pessoas"]["c"] = "Maria"; // Adiciona 'Maria' na chave 'c'
+
+      // Exibe a lista completa no console
+      console.log(lista_coisas);
+      // Exibe o quarto elemento do array de frutas no console (index 3)
+      console.log(lista_coisas["frutas"][3]);
+      // Escreve o quarto elemento do array de frutas na página
+      document.write(lista_coisas["frutas"][3]);
+      // Escreve o valor associado à chave 'b' do array de pessoas na página
+      document.write(lista_coisas["pessoas"]["b"]);
+    </script>
+  </head>
+
+  <body></body>
+</html>

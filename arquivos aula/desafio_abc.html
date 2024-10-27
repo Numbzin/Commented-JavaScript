@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      let a = 10;
+      let b = 20;
+      let c = null; // variável auxiliar utilizada na lógica
+
+      document.write('A: ' + a + '<br />');
+      document.write('B: ' + b + '<br />');
+      document.write('C: ' + c + '<br />');
+
+      document.write('<hr />');
+
+      // lógica de inversão dos valores das variáveis A e B
+      c = a; // armazena o valor de A em C
+      a = b; // atribui o valor de B a A
+      b = c; // atribui o valor armazenado em C (que é o antigo A) a B
+      c = null; // opcionalmente redefine C para null
+
+      // exibe os valores após a inversão
+      document.write('A: ' + a + '<br />');
+      document.write('B: ' + b + '<br />');
+      document.write('C: ' + c + '<br />');
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

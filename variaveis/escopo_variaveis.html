@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Existem 3 tipos principais de escopos no JavaScript: global, função e bloco.
+
+      // Escopo global: A variável 'serie' é declarada fora de qualquer função ou bloco.
+      // Isso significa que ela pode ser acessada de qualquer parte do código.
+      let serie = "Friends";
+
+      // Escopo de bloco: Este bloco 'if' cria um escopo local.
+      if (true) {
+        // A variável 'serie2' está dentro de um escopo de bloco, criada usando 'let'.
+        // Isso significa que 'serie2' só pode ser acessada dentro deste bloco.
+        let serie2 = "GoF";
+
+        // Aqui, 'serie' pode ser acessada porque está no escopo global.
+        document.write(serie); // Resultado: 'Friends'
+      }
+
+      // Aqui, tentamos acessar 'serie2' fora do bloco 'if'.
+      // Como 'serie2' foi declarada com 'let' dentro de um escopo de bloco, dá erro.
+      document.write(serie2); // Erro: 'serie2' não está definida fora do bloco.
+
+      document.write("<br />");
+
+      // Função 'x' com escopo de função:
+      function x() {
+        // 'serie3' é uma variável local, específica para esta função.
+        let serie3 = "TwD";
+
+        // 'serie' e 'serie2' são acessíveis aqui.
+        // 'serie' é global, então é visível na função.
+        document.write(serie); // Resultado: 'Friends'
+
+        // 'serie2' NÃO está acessível aqui, porque foi criada no escopo de bloco do 'if'.
+        document.write(serie2); // Erro: 'serie2' não está definida neste escopo.
+
+        // 'serie3' foi declarada dentro da função, então está acessível aqui.
+        document.write(serie3); // Resultado: 'TwD'
+      }
+
+      // Chamamos a função 'x'
+      x();
+
+      document.write("<br />");
+
+      // Aqui tentamos acessar 'serie3' fora da função.
+      // Como 'serie3' foi declarada dentro da função 'x', ela não é acessível fora dela.
+      document.write(serie3); // Erro: 'serie3' não está definida fora da função.
+    </script>
+  </body>
+</html>
