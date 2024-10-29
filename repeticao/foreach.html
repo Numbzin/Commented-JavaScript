@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // O código abaixo inicializa um array para armazenar nomes de funcionários
+        // let listaFuncionarios = ['AB', 'João', 'Lucas', 'Fernanda', 'Maria']
+
+        // Cria um array vazio chamado listaFuncionarios
+        let listaFuncionarios = Array();
+
+        // Adiciona elementos ao array usando chaves não convencionais
+        listaFuncionarios['x'] = 'AB';          // Adiciona 'AB' com a chave 'x'
+        listaFuncionarios[false] = 'João';      // Adiciona 'João' com a chave false (equivale a 0)
+        listaFuncionarios[3] = 'Lucas';         // Adiciona 'Lucas' na posição 3
+        listaFuncionarios[27] = 'Fernanda';     // Adiciona 'Fernanda' na posição 27
+        listaFuncionarios[-12] = 'Maria';       // Adiciona 'Maria' com a chave -12
+
+        // Define uma função que será usada como callback no forEach
+        let f = function(valor, indice) {
+            console.log(valor, indice); // Exibe o valor e o índice no console
+        }
+
+        // Usa o método forEach para iterar sobre listaFuncionarios
+        listaFuncionarios.forEach(f); // Chama a função 'f' para cada elemento do array
+
+        /* 
+        // O código abaixo está comentado e não será executado.
+        console.log(listaFuncionarios); // Exibe o array completo no console
+        document.write(listaFuncionarios[3]); // Escreve o valor na posição 3 (Lucas) na página
+
+        // Usa o método forEach para modificar o array
+        listaFuncionarios.forEach(function(valor, indice, array) {
+            console.log('indice: ' + indice + ' | valor: ' + valor); // Exibe o índice e o valor
+
+            // Se o valor for 'Lucas', altera seu valor no array
+            if(valor == 'Lucas') {
+                array[indice] = 'Um novo valor'; // Substitui 'Lucas' por 'Um novo valor'
+            }
+        });
+
+        console.log(listaFuncionarios); // Exibe o array modificado no console
+        document.write('<br />' + listaFuncionarios[3]); // Escreve o novo valor na posição 3 na página
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

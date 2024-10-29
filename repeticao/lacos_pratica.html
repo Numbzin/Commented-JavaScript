@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Frutas</title>
+    <script>
+        // Este código cria uma lista de frutas e exibe cada uma delas em uma nova linha na página HTML.
+
+        // Inicializa um array para armazenar as frutas
+        let lista_frutas = Array();
+
+        // Adiciona frutas ao array em posições específicas
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã';
+        lista_frutas[2] = 'Morango';
+        lista_frutas[3] = 'Uva';
+
+        // Inicializa um contador para iterar sobre o array
+        let y = 0;
+
+        // O loop while continua enquanto 'y' for menor que o comprimento do array
+        while (y < lista_frutas.length) {
+            // Escreve o valor da fruta na posição 'y' do array e adiciona uma quebra de linha
+            document.write(lista_frutas[y] + '<br />');
+            // Incrementa 'y' para passar para a próxima fruta
+            y++;
+        } 
+    </script>
+</head>
+<body>
+</body>
+</html>

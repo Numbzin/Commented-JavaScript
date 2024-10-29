@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Exercício: Exibir a tabuada de 1 a 10 usando loops `while`.
+
+        let y = 1; // Inicializa a variável 'y' que representa o número da tabuada
+
+        // Loop externo que itera de 1 a 10 para a tabuada
+        while (y <= 10) {
+            let x = 1; // Inicializa a variável 'x' para multiplicar pelo 'y'
+            
+            // Loop interno que itera de 1 a 10 para calcular a tabuada de 'y'
+            while (x <= 10) {
+                // Escreve no documento o resultado da multiplicação
+                document.write(y + " x " + x + " = " + (y * x) + "<br />");
+                x++; // Incrementa 'x' para a próxima multiplicação
+            }
+            
+            document.write("<hr />"); // Adiciona uma linha horizontal entre as tabuadas
+            y++; // Incrementa 'y' para a próxima tabuada
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

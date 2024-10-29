@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada</title>
+    <script>
+        // Este código gera a tabuada de 1 a 10.
+        // Para cada número de 1 a 10, ele calcula a multiplicação desse número por todos os números de 1 a 10
+        // e exibe o resultado no documento HTML.
+
+        // O loop externo itera de 1 a 10, representando o multiplicando (y)
+        for (let y = 1; y <= 10; y++) {
+            // O loop interno itera de 1 a 10, representando o multiplicador (x)
+            for (let x = 1; x <= 10; x++) {
+                // O resultado da multiplicação é calculado e exibido no formato "y x x = resultado"
+                document.write(`${y} x ${x} = ${y * x}<br />`);
+            }
+
+            // Adiciona uma linha horizontal entre as tabuadas de cada número
+            document.write("<hr />");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Exercício: Exibir cada fruta da lista na página HTML usando um loop `for`.
+
+        // Inicializa um array vazio para armazenar frutas
+        let lista_frutas = Array();
+
+        // Adiciona frutas ao array
+        lista_frutas[0] = 'Banana';   // Adiciona 'Banana' na posição 0 do array
+        lista_frutas[1] = 'Maçã';     // Adiciona 'Maçã' na posição 1 do array
+        lista_frutas[2] = 'Morango';   // Adiciona 'Morango' na posição 2 do array
+        lista_frutas[3] = 'Uva';       // Adiciona 'Uva' na posição 3 do array
+
+        // O loop `for` percorre o array de frutas
+        for(let x = 0; x < lista_frutas.length; x++) { 
+            // Usa 'document.write' para escrever o nome da fruta na página
+            // '+ '<br />' adiciona uma quebra de linha após cada fruta
+            document.write(lista_frutas[x] + '<br />'); 
+        } 
+
+        // Exibe o array completo de frutas no console do navegador
+        // Útil para verificar se as frutas foram adicionadas corretamente
+        console.log(lista_frutas);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

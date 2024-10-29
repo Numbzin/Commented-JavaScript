@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // O código abaixo inicializa um array para armazenar convidados
+        // let listaConvidados = ['Jorge', 'NMB', 'AB', 'Ana', 'Maria']
+
+        // Cria um array vazio chamado listaConvidados
+        let listaConvidados = Array();
+
+        // Adiciona elementos ao array usando chaves não convencionais
+        listaConvidados['a'] = 'NMB';        // Adiciona 'NMB' com a chave 'a'
+        listaConvidados[10] = 'Jorge';      // Adiciona 'Jorge' na posição 10
+        listaConvidados['zebra'] = 'AB';    // Adiciona 'AB' com a chave 'zebra'
+        listaConvidados[-1] = 'Maria';      // Adiciona 'Maria' com a chave -1
+        listaConvidados[true] = 'Ana';       // Adiciona 'Ana' com a chave true (equivale a 1)
+
+        // Exibe o array completo no console, mostrando as chaves e valores
+        console.log(listaConvidados);
+
+        // O loop 'for...in' itera sobre as chaves do objeto (array) listaConvidados
+        for(let x in listaConvidados) {
+            // Exibe no console o índice (ou chave) e o valor correspondente
+            console.log('Índice ' + x + ' valor ' + listaConvidados[x]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
