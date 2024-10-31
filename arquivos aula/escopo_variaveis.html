@@ -2,34 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Entendendo Escopos de Variáveis em JavaScript</title>
     <script>
-      // 3 escopos: global, função e bloco
+      // ===============================================
+      // ESCOPO GLOBAL
+      // Variáveis declaradas fora de funções e blocos
+      // são acessíveis em qualquer lugar do código
+      // ===============================================
+      var serieGlobal = 'Friends';
+      document.write('1. Variável Global (serieGlobal): ' + serieGlobal + '<br><br>');
 
-      let serie = 'Friends'; // Escopo global
-
-      // Escopo de bloco
+      // ===============================================
+      // ESCOPO DE BLOCO
+      // Let e Const criam variáveis que só existem
+      // dentro do bloco onde foram criadas (entre {})
+      // ===============================================
       if (true) {
-        let serie2 = 'Game of Thrones'; // Também se torna global por ser declarada com let
-        document.write(serie + '<br />'); // Acessa a variável global 'serie'
+        let serieBlocoIf = 'Game of Thrones';
+        document.write('2. Dentro do IF - Variável de Bloco (serieBlocoIf): ' + serieBlocoIf + '<br>');
+        document.write('   Dentro do IF - Posso acessar variável global (serieGlobal): ' + serieGlobal + '<br><br>');
+      }
+      // Não podemos acessar serieBlocoIf aqui!
+      document.write('3. Fora do IF - Não posso acessar serieBlocoIf (daria erro)<br><br>');
+
+      // ===============================================
+      // ESCOPO DE FUNÇÃO
+      // Variáveis declaradas dentro de uma função
+      // só existem dentro dela
+      // ===============================================
+      function mostrarSeries() {
+        let serieFuncao = 'The Walking Dead';
+        document.write('4. Dentro da Função:<br>');
+        document.write('   - Posso acessar variável da função (serieFuncao): ' + serieFuncao + '<br>');
+        document.write('   - Posso acessar variável global (serieGlobal): ' + serieGlobal + '<br><br>');
       }
 
-      // Acessa 'serie2' que está no escopo global
-      document.write(serie2 + '<br />');
+      // Chamando a função
+      mostrarSeries();
 
-      function x() {
-        let serie3 = 'The Walking Dead'; // Escopo da função
-        document.write(serie + '<br />'); // Acessa a variável global 'serie'
-        document.write(serie2 + '<br />'); // Acessa 'serie2' que está no escopo global
-      }
+      // Não podemos acessar serieFuncao aqui!
+      document.write('5. Fora da Função - Não posso acessar serieFuncao (daria erro)<br>');
+      document.write('   Mas posso acessar variável global (serieGlobal): ' + serieGlobal + '<br><br>');
 
-      x(); // Chama a função x
-
-      // A tentativa de acessar 'serie3' aqui causará um erro, pois 'serie3' está no escopo da função 'x'.
-      // document.write(serie3); // Isso está comentado para evitar erro
-
-      // Exibindo uma mensagem de erro
-      document.write('Erro: serie3 não está acessível fora da função x. <br />');
+      document.write('============= RESUMO =============<br>');
+      document.write('- Variáveis globais: acessíveis em todo lugar<br>');
+      document.write('- Variáveis de bloco (let/const): só dentro do bloco {}<br>');
+      document.write('- Variáveis de função: só dentro da função<br>');
     </script>
   </head>
   <body>

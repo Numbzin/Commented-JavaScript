@@ -1,46 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ordenação de Arrays em JavaScript</title>
     <script>
-        /*
-        let lista_frutas = Array()
+        // Início do conteúdo formatado
+        document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+        document.write('<h2>🔢 Ordenação de Arrays em JavaScript</h2>');
 
-        lista_frutas[0] = 'Maçã'
-        lista_frutas[1] = 'Uva'
-        lista_frutas[2] = 'Banana'
-        lista_frutas[3] = 'Morango'
+        // Inicializa um array de frutas
+        let lista_frutas = Array();
+        lista_frutas[0] = 'Maçã';
+        lista_frutas[1] = 'Uva';
+        lista_frutas[2] = 'Banana';
+        lista_frutas[3] = 'Morango';
 
-        // Exibe a lista de frutas ordenada no console
-        console.log(lista_frutas.sort())
-        */
+        // Ordena e exibe a lista de frutas no console
+        console.log("Lista de frutas ordenada:", lista_frutas.sort());
+        document.write('<h3>Lista de Frutas Ordenada:</h3>' + lista_frutas.sort().join(', ') + '<br />');
 
         // Inicializa um array para números
-        let lista_numeros = Array()
+        let lista_numeros = Array();
 
         // Adiciona números à lista como strings
-        lista_numeros[0] = '12'
-        lista_numeros[1] = '40'
-        lista_numeros[2] = '3'
-        lista_numeros[3] = '7'
-        lista_numeros[4] = '19'
-        lista_numeros[5] = '1'
+        lista_numeros[0] = '12';
+        lista_numeros[1] = '40';
+        lista_numeros[2] = '3';
+        lista_numeros[3] = '7';
+        lista_numeros[4] = '19';
+        lista_numeros[5] = '1';
 
         // Exibe a lista de números ordenada no console
-        console.log(lista_numeros.sort(ordenaNumeros))
+        console.log("Lista de números ordenada:", lista_numeros.sort(ordenaNumeros));
+        document.write('<h3>Lista de Números Ordenada:</h3>' + lista_numeros.sort(ordenaNumeros).join(', ') + '<br />');
 
         // Função para ordenar números corretamente
         function ordenaNumeros(a, b) {
-            return a - b // Retorna a diferença entre a e b
+            return a - b; // Retorna a diferença entre a e b
         }
         // < 0 significa que 'a' deve ser ordenado antes de 'b'
         // > 0 significa que 'b' deve ser ordenado antes de 'a'
         // == 0 significa que a ordem é mantida
+
+        document.write('</div>'); // Fecha o conteúdo formatado
     </script>
 </head>
 <body>
-    
 </body>
 </html>

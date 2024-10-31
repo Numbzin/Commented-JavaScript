@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <title>Selecionando Elementos no DOM</title>
+    <script>
+        // Função que é executada quando a página é carregada
+        window.onload = function() {
+            // Registra o elemento de entrada pelo seu ID no console
+            // O método getElementById retorna o elemento com o ID especificado
+            const usuario = document.getElementById("nome_usuario");
+            console.log("Elemento pelo ID:", usuario);
+            
+            // Registra todos os elementos do tipo 'input' no console
+            // O método getElementsByTagName retorna uma coleção de todos os elementos que têm o nome da tag especificada
+            const inputs = document.getElementsByTagName("input");
+            console.log("Todos os elementos <input>:", inputs);
+            
+            // Registra todos os elementos com a classe 'campo_texto' no console
+            // O método getElementsByClassName retorna uma coleção de todos os elementos que têm a classe especificada
+            const camposTexto = document.getElementsByClassName("campo_texto");
+            console.log("Elementos com a classe 'campo_texto':", camposTexto);
+            
+            // Registra todos os elementos com o nome 'nome' no console
+            // O método getElementsByName retorna uma coleção de todos os elementos que têm o atributo name especificado
+            const nomes = document.getElementsByName("nome");
+            console.log("Elementos com o nome 'nome':", nomes);
+        };
+    </script>
+</head>
 
-    <script></script>
-  </head>
-
-  <body>
+<body>
     <!-- Campo de entrada para o nome do usuário -->
     <input
-      type="text"
-      placeholder="Digite seu nome"
-      id="nome_usuario"  <!-- ID único para o elemento -->
-      class="campo_texto" <!-- Classe aplicada ao elemento -->
-      name="nome" <!-- Nome do elemento, usado em formulários -->
+        type="text"
+        placeholder="Digite seu nome"
+        id="nome_usuario" 
+        class="campo_texto" 
+        name="nome" 
     />
-
-    <script>
-      // Registra o elemento de entrada pelo seu ID no console
-      console.log(document.getElementById("nome_usuario"));
-      
-      // Registra todos os elementos do tipo 'input' no console
-      console.log(document.getElementsByTagName("input"));
-      
-      // Registra todos os elementos com a classe 'campo_texto' no console
-      console.log(document.getElementsByClassName("campo_texto"));
-      
-      // Registra todos os elementos com o nome 'nome' no console
-      console.log(document.getElementsByName("nome"));
-    </script>
-  </body>
+</body>
 </html>

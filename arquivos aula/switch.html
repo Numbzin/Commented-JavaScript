@@ -2,28 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Estruturas Condicionais em JavaScript</title>
     <script>
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>🔄 Estrutura Switch em JavaScript</h2>');
+      document.write('<p>Vamos aprender como usar a estrutura <code>switch</code> para realizar diferentes ações com base no valor fornecido pelo usuário!</p>');
+
+      // ===============================================
+      // SOLICITA UM NÚMERO AO USUÁRIO
+      // ===============================================
+      document.write('<h3>1️⃣ Solicitando um Número</h3>');
+
       // Solicita ao usuário que digite um número
-      var parametro = prompt('Digite um número');
+      var parametro = prompt('Digite um número:');
+
+      document.write('<p><em>💡 O usuário insere um número através de um <code>prompt</code>, que é uma caixa de diálogo que solicita a entrada do usuário.</em></p>');
+
+      // ===============================================
+      // AVALIA O NÚMERO COM SWITCH
+      // ===============================================
+      document.write('<h3>2️⃣ Avaliando o Número com Switch</h3>');
 
       // Converte o valor digitado em um inteiro e avalia o parâmetro
       switch (parseInt(parametro)) {
         
         case 1: // Caso em que o parâmetro é igual a 1
-          document.write('Parâmetro 1'); // Exibe a mensagem correspondente
+          document.write('Você digitou: Parâmetro 1<br />'); // Exibe a mensagem correspondente
           break; // Encerra o switch
 
         case 2: // Caso em que o parâmetro é igual a 2
-          document.write('Parâmetro 2'); // Exibe a mensagem correspondente
+          document.write('Você digitou: Parâmetro 2<br />'); // Exibe a mensagem correspondente
+          break; // Encerra o switch
+
+        case 3: // Caso em que o parâmetro é igual a 3
+          document.write('Você digitou: Parâmetro 3<br />'); // Exibe a mensagem correspondente
           break; // Encerra o switch
 
         default: // Caso padrão se nenhum dos casos acima for atendido
-          document.write('Default'); // Exibe uma mensagem padrão
+          document.write('Valor não reconhecido!<br />'); // Exibe uma mensagem padrão
       }
+
+      document.write('<p><em>💡 A estrutura <code>switch</code> avalia o valor da expressão e executa o bloco de código correspondente ao <code>case</code> que é verdadeiro. O <code>break</code> é importante para evitar a execução de outros casos.</em></p>');
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📚 Resumo sobre Switch</h3>');
+
+      document.write('<p><strong>Principais conceitos:</strong></p>');
+      document.write('👉 <code>switch</code> - Avalia uma expressão e executa o bloco correspondente ao <code>case</code> que é verdadeiro<br>');
+      document.write('👉 <code>case</code> - Define uma condição específica dentro do <code>switch</code><br>');
+      document.write('👉 <code>default</code> - Executa um bloco de código se nenhum <code>case</code> for atendido<br>');
+      document.write('👉 <code>break</code> - Interrompe a execução do <code>switch</code> após um <code>case</code> ser executado<br>');
+
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('⚠️ Utilize <code>switch</code> quando você tiver múltiplas condições a verificar, especialmente se elas forem baseadas em um único valor.<br>');
+      document.write('⚠️ Sempre inclua um caso <code>default</code> para lidar com entradas inesperadas ou não reconhecidas.<br>');
+
+      document.write('</div>'); // Fecha o conteúdo formatado
     </script>
   </head>
-
   <body>
   </body>
 </html>

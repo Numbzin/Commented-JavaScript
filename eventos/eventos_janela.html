@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
-
-    <script></script> <!-- Espaço reservado para incluir scripts JavaScript adicionais -->
-  </head>
-
-  <!-- 
-  <body onresize="console.log('evento disparado')"> 
-  Evento comentado: Este evento seria acionado quando a janela do navegador é redimensionada. 
-  -->
-  
-  <body onscroll="console.log('evento disparado')"> <!-- Evento que é acionado quando a página é rolada -->
-    <div style="height: 3000px; width: 125px; background-color: #ccc"></div> 
+    <title>Eventos de Janela em JavaScript</title>
+    <script>
+        // Evento acionado quando a página é rolada
+        function onScroll() {
+            console.log('Evento disparado'); // Exibe mensagem no console quando o evento é acionado
+        }
+    </script> <!-- Espaço reservado para incluir scripts JavaScript adicionais -->
+</head>
+<body onscroll="onScroll()"> <!-- Evento que é acionado quando a página é rolada -->
+    <div style="height: 3000px; width: 125px; background-color: #ccc;"></div>
     <!-- Um div com altura de 3000 pixels para permitir a rolagem da página, 
          exibindo um fundo cinza claro -->
-  </body>
+</body>
 </html>

@@ -2,25 +2,71 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Entendendo Casting (Conversão de Tipos) em JavaScript</title>
     <script>
-      // Declara duas variáveis numéricas
-      let variavel1 = 10;
-      let variavel2 = 20;
+      document.write('<h2>Entendendo Casting em JavaScript</h2>');
 
-      // Comentado: as seguintes linhas convertiriam as variáveis para outros tipos
-      // variavel1 = parseInt(variavel1); // Converte variavel1 para um número inteiro (não é necessário, pois já é um número)
-      // variavel2 = parseFloat(variavel2); // Converte variavel2 para um número de ponto flutuante (não é necessário, pois já é um número)
+      // ===============================================
+      // NÚMEROS PARA STRING
+      // ===============================================
+      let numero = 10;
+      document.write('<strong>1. Convertendo Número para String:</strong><br>');
+      document.write('- Número original: ' + numero + ' (tipo: ' + typeof numero + ')<br>');
+      
+      // Usando toString()
+      let numeroComoString = numero.toString();
+      document.write('- Após toString(): ' + numeroComoString + ' (tipo: ' + typeof numeroComoString + ')<br>');
+      
+      // Usando String()
+      let numeroComoString2 = String(numero);
+      document.write('- Após String(): ' + numeroComoString2 + ' (tipo: ' + typeof numeroComoString2 + ')<br><br>');
 
-      // Exibe os valores das variáveis no console
-      console.log(variavel1); // Saída: 10
-      console.log(variavel2); // Saída: 20
+      // ===============================================
+      // STRING PARA NÚMERO
+      // ===============================================
+      let textoNumerico = "123.456";
+      document.write('<strong>2. Convertendo String para Número:</strong><br>');
+      document.write('- String original: ' + textoNumerico + ' (tipo: ' + typeof textoNumerico + ')<br>');
+      
+      // Usando parseInt()
+      let inteiroConvertido = parseInt(textoNumerico);
+      document.write('- Após parseInt(): ' + inteiroConvertido + ' (tipo: ' + typeof inteiroConvertido + ')<br>');
+      
+      // Usando parseFloat()
+      let decimalConvertido = parseFloat(textoNumerico);
+      document.write('- Após parseFloat(): ' + decimalConvertido + ' (tipo: ' + typeof decimalConvertido + ')<br>');
+      
+      // Usando Number()
+      let numeroConvertido = Number(textoNumerico);
+      document.write('- Após Number(): ' + numeroConvertido + ' (tipo: ' + typeof numeroConvertido + ')<br><br>');
 
-      // Converte as variáveis para string e as concatena, exibindo no documento
-      document.write(variavel1.toString() + variavel2.toString()); // Saída: 1020
+      // ===============================================
+      // EXEMPLO PRÁTICO
+      // ===============================================
+      document.write('<strong>3. Exemplo Prático:</strong><br>');
+      let valor1 = 10;
+      let valor2 = "20";
+      
+      // Soma sem conversão (concatenação)
+      document.write('- Soma sem conversão: ' + valor1 + valor2 + ' (concatena como strings)<br>');
+      
+      // Soma com conversão
+      document.write('- Soma com conversão: ' + (valor1 + Number(valor2)) + ' (soma numérica)<br><br>');
+
+      // ===============================================
+      // RESUMO
+      // ===============================================
+      document.write('<strong>RESUMO:</strong><br>');
+      document.write('Para converter para String:<br>');
+      document.write('- toString(): número.toString()<br>');
+      document.write('- String(): String(valor)<br><br>');
+      
+      document.write('Para converter para Número:<br>');
+      document.write('- parseInt(): para números inteiros<br>');
+      document.write('- parseFloat(): para números decimais<br>');
+      document.write('- Number(): para qualquer tipo de número<br>');
     </script>
   </head>
-
   <body>
   </body>
 </html>

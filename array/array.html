@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lista de Frutas</title>
     <script>
-      // Declara um array chamado lista_frutas
-      const lista_frutas = [];
+        // Declara um array chamado lista_frutas
+        const lista_frutas = [];
 
-      // Adiciona frutas ao array em índices específicos
-      lista_frutas[1] = "banana"; // Fruta na posição 1
-      lista_frutas[2] = "morango"; // Fruta na posição 2
-      lista_frutas[3] = "Maçã"; // Fruta na posição 3
-      lista_frutas[4] = "Uva"; // Fruta na posição 4
+        // Adiciona frutas ao array em índices específicos
+        lista_frutas[1] = "banana";   // Fruta na posição 1
+        lista_frutas[2] = "morango";  // Fruta na posição 2
+        lista_frutas[3] = "maçã";     // Fruta na posição 3
+        lista_frutas[4] = "uva";      // Fruta na posição 4
+
+        // Função para exibir todas as frutas no console
+        function exibirFrutas() {
+            console.log("Lista de Frutas:");
+            for (let i = 1; i < lista_frutas.length; i++) {
+                // Verifica se o índice contém uma fruta
+                if (lista_frutas[i]) {
+                    console.log(`Índice ${i}: ${lista_frutas[i]}`);
+                }
+            }
+        }
+
+        // Chama a função para exibir as frutas no console
+        exibirFrutas();
     </script>
 </head>
 <body>
+    <h1>Lista de Frutas</h1>
+    <p>Abra o console para ver a lista de frutas!</p>
 </body>
 </html>

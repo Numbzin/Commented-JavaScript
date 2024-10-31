@@ -153,8 +153,7 @@ let idade = 18; // A variável 'idade' recebe o valor 18
 
 // Sintaxe: (condição) ? valorSeVerdadeiro : valorSeFalso
 let podeDirigir = (idade >= 18) ? "Pode dirigir" : "Não pode dirigir"; 
-console.log("Resultado do operador ternário:", podeDirigir);
-// "Pode dirigir", porque idade é 18 ou mais
+console.log("Resultado do operador ternário:", podeDirigir); // "Pode dirigir", porque idade é 18 ou mais
 
 
 // 7. Operadores de Bits
@@ -186,20 +185,3 @@ console.log("Deslocamento para a esquerda (bitA << 1):", deslocaEsq);
 // Deslocamento para a direita (>>): Move todos os bits para a direita
 let deslocaDir = bitA >> 1; // 0101 >> 1 = 0010 (2 em decimal)
 console.log("Deslocamento para a direita (bitA >> 1):", deslocaDir);
-
-
-// 8. Operadores de Tipo
-// Usados para verificar tipos de dados.
-
-let nome = "Fernando"; // A variável 'nome' contém a string "Fernando"
-let numero = 123; // A variável 'numero' é um número
-let booleano = true; // A variável 'booleano' é verdadeira
-
-// typeof: Retorna o tipo da variável
-console.log("Tipo de nome:", typeof nome); // "string"
-console.log("Tipo de numero:", typeof numero); // "number"
-console.log("Tipo de booleano:", typeof booleano); // "boolean"
-
-// instanceof: Verifica se um objeto é de um tipo específico
-let data = new Date(); // Cria um novo objeto de data
-console.log("data é uma instância de Date:", data instanceof Date); // true, porque data é um objeto Date

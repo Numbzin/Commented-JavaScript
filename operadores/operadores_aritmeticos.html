@@ -1,62 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Operadores Aritméticos em JavaScript</title>
+    <script>
+      // Início do conteúdo formatado
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>➕ Operadores Aritméticos em JavaScript</h2>');
+      document.write('<p>Vamos aprender sobre os operadores aritméticos e como utilizá-los em JavaScript!</p>');
+
+      // ===============================================
+      // SOLICITA DOIS NÚMEROS AO USUÁRIO
+      // ===============================================
+      document.write('<h3>1️⃣ Solicitação de Números</h3>');
+
+      // Solicita dois números ao usuário e converte para número decimal
+      let num1 = parseFloat(prompt('Digite o valor de num1:'));
+      let num2 = parseFloat(prompt('Digite o valor de num2:'));
+
+      document.write('<p><em>💡 Utilizamos <code>parseFloat()</code> para converter as entradas do usuário em números decimais.</em></p>');
+
+      // ===============================================
+      // OPERAÇÕES ARITMÉTICAS BÁSICAS
+      // ===============================================
+      document.write('<h3>2️⃣ Operações Aritméticas Básicas</h3>');
+      document.write('A soma entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 + num2) + '<br />'); // Soma
+      document.write('A subtração entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 - num2) + '<br />'); // Subtração
+      document.write('A multiplicação entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 * num2) + '<br />'); // Multiplicação
+      document.write('A divisão entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 / num2) + '<br />'); // Divisão
+      document.write('O módulo entre ' + num1 + ' e ' + num2 + ' é: ' + (num1 % num2) + '<br />'); // Módulo
+
+      document.write('<p><em>💡 Realizamos as operações aritméticas básicas utilizando os operadores <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> e <code>%</code>.</em></p>');
+
+      // ===============================================
+      // INCREMENTO E DECREMENTO
+      // ===============================================
+      document.write('<h3>3️⃣ Incremento e Decremento</h3>');
+      document.write('O incremento de ' + num1 + ' é: ' + (++num1) + '<br />'); // Incremento (prefixado)
+      document.write(num1 + '<br />'); // Mostra o valor atualizado de num1
+      document.write('O decremento de ' + num1 + ' é: ' + (--num1) + '<br />'); // Decremento (prefixado)
+      document.write(num1 + '<br />'); // Mostra o valor final de num1
+
+      document.write('<p><em>💡 Utilizamos <code>++</code> para incrementar o valor da variável e <code>--</code> para decrementá-la.</em></p>');
+
+      // ===============================================
+      // OPERADORES DE ATRIBUIÇÃO
+      // ===============================================
+      document.write('<h3>4️⃣ Operadores de Atribuição</h3>');
+      let teste = 'Olá '; // Inicializa a variável teste com uma string
+      teste += 'Jorge'; // Concatena 'Jorge' à string teste
+      document.write(teste + '<br />'); // Exibe o resultado da concatenação
+
+      document.write('<p><em>💡 Utilizamos <code>+=</code> para concatenar strings. Este operador adiciona à variável existente.</em></p>');
+
+      // ===============================================
+      // EXPRESSÃO ARITMÉTICA COM PRECEDÊNCIA
+      // ===============================================
+      document.write('<h3>5️⃣ Expressão Aritmética com Precedência</h3>');
+      let resultado = (11 + 5 - 5 * 2) / 2; // Expressão com parênteses para controlar a precedência
+      document.write('Resultado da expressão (11 + 5 - 5 * 2) / 2 é: ' + resultado + '<br />');
+
+      // Notas sobre precedência dos operadores:
+      // 1º - Multiplicação (*) e divisão (/) são realizadas antes de soma (+) e subtração (-).
+      // 2º - Para controlar a ordem das operações, utilize parênteses.
+      document.write('<p><em>💡 A precedência dos operadores determina a ordem em que as operações são executadas. Utilize parênteses para garantir a execução correta.</em></p>');
+
+      document.write('</div>'); // Fecha o conteúdo formatado
+    </script>
   </head>
   <body>
-    <script>
-      // Solicita os valores e converte para números
-      let num1 = Number(prompt('Digite o valor de num1:')); // Converte a entrada para um número
-      let num2 = Number(prompt('Digite o valor de num2:')); // Converte a entrada para um número
-
-      // Verifica se as entradas são números válidos
-      if (isNaN(num1) || isNaN(num2)) { // isNaN verifica se o valor não é um número
-        document.write('Por favor, insira valores numéricos válidos.'); // Mensagem de erro se não for um número
-      } else {
-        // Realiza as operações matemáticas
-        // adição (+)
-        document.write(`A soma entre ${num1} e ${num2} é: ${num1 + num2} <br>`); // Exibe a soma
-        // subtração (-)
-        document.write(`A subtração entre ${num1} e ${num2} é: ${num1 - num2} <br>`); // Exibe a subtração
-        // multiplicação (*)
-        document.write(`A multiplicação entre ${num1} e ${num2} é: ${num1 * num2} <br>`); // Exibe a multiplicação
-        // divisão (/)
-        document.write(`A divisão entre ${num1} e ${num2} é: ${num1 / num2} <br>`); // Exibe a divisão
-        // Módulo (%) - Resto existente em uma operação de divisão
-        document.write(`O módulo entre ${num1} e ${num2} é: ${num1 % num2} <br>`); // Exibe o resto da divisão
-        
-        // Incremento e decremento, usando variáveis separadas
-        let increment = num1 + 1; // Incrementa num1 em 1
-        let decrement = num1 - 1; // Decrementa num1 em 1
-
-        document.write(`O incremento de ${num1} é: ${increment} <br>`); // Exibe o incremento
-        document.write(`O decremento de ${num1} é: ${decrement} <br>`); // Exibe o decremento
-      }
-
-      // Exemplos de operações usando um valor de teste
-      // let teste = 10; // Valor inicial
-      /*
-      let teste = 'Opa, '; // String inicial
-
-      teste = teste + 5; // Concatena 5 à string
-      teste += 5; // Concatena 5 à string novamente
-      teste -= 5; // Subtrai 5 da string, resultando em NaN (não é um número)
-      teste *= 5; // Multiplica NaN por 5, resultando em NaN
-      teste /= 2; // Divide NaN por 2, resultando em NaN
-      teste %= 3; // Aplica o módulo sobre NaN, resultando em NaN
-      teste += 'NMB'; // Concatena 'NMB' à string NaN, resultando em 'NaN NMB'
-      document.write(teste); // Exibe o resultado
-      */
-
-      // () - aplicar precedência
-      // 1 - multiplicação e subtração
-      // 2 - soma e subtração
-
-      // Exemplo de precedência de operadores:
-      // A operação será realizada na seguinte ordem: multiplicação -> subtração -> soma
-      document.write(11 + 5 - 5 * 2 / 2); // Resultado das operações com precedência
-    </script>
   </body>
 </html>

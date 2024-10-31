@@ -3,10 +3,11 @@
 // Eventos são ações que ocorrem em um documento HTML, como cliques, movimentos do mouse, teclas pressionadas, entre outros.
 // Neste arquivo, vamos demonstrar como manipular eventos usando JavaScript.
 
-// 1. Acessando um elemento
+// 1. Acessando elementos
 // Vamos assumir que temos um botão com o id "meuBotao" e um input com o id "meuInput".
 let botao = document.getElementById('meuBotao'); // Acessa o botão pelo ID
 let meuInput = document.getElementById('meuInput'); // Acessa o input pelo ID
+let formulario = document.getElementById('meuFormulario'); // Acessa o formulário pelo ID
 
 // 2. Adicionando um evento de clique a um botão
 botao.addEventListener('click', function() {
@@ -38,9 +39,7 @@ meuInput.addEventListener('keypress', function(event) {
 });
 
 // 7. Usando um evento para prevenir o comportamento padrão
-// Supondo que temos um formulário com o id "meuFormulario".
-let formulario = document.getElementById('meuFormulario'); // Acessa o formulário pelo ID
-
+// Vamos adicionar um evento de submissão ao formulário.
 formulario.addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio do formulário
     alert('Formulário enviado!'); // Exibe um alerta ao invés de enviar o formulário

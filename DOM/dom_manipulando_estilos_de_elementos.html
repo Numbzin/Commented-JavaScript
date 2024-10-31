@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manipulação de Estilos no DOM</title>
     <script>
         // Função que modifica o estilo do elemento com id 'quadrado'
-        function modificaEstilo(corDeFundo, l, a) {
+        function modificaEstilo(corDeFundo, largura, altura) {
+            // Obtém o elemento pelo ID 'quadrado'
+            let quadrado = document.getElementById('quadrado');
+
             // Altera a cor de fundo do elemento
-            document.getElementById('quadrado').style.background = corDeFundo;
+            quadrado.style.background = corDeFundo;
 
             // Altera a largura do elemento
-            document.getElementById('quadrado').style.width = l;
+            quadrado.style.width = largura;
 
             // Altera a altura do elemento
-            document.getElementById('quadrado').style.height = a;
+            quadrado.style.height = altura;
         }
     </script>
 </head>
 <body>
     <h3>Manipulando Estilo</h3>
     <!-- Botões que chamam a função 'modificaEstilo' com diferentes parâmetros -->
-    <button type="button" onclick="modificaEstilo('#FF0000', '200px')">Vermelho</button>
-    <button type="button" onclick="modificaEstilo('#00FF00', '150px', '20px')">Verde</button>
+    <button type="button" onclick="modificaEstilo('#FF0000', '200px', '200px')">Vermelho</button>
+    <button type="button" onclick="modificaEstilo('#00FF00', '150px', '150px')">Verde</button>
     <button type="button" onclick="modificaEstilo('#0000FF', '150px', '200px')">Azul</button>
 
     <hr>
     <!-- Div que será manipulada pela função, inicialmente com 100px de largura e altura -->
-    <div id="quadrado" style="border: solid 1px #000; width: 100px; height: 100px"></div>
+    <div id="quadrado" style="border: solid 1px #000; width: 100px; height: 100px;"></div>
 </body>
 </html>

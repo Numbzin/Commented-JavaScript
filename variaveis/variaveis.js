@@ -18,7 +18,7 @@ console.log(numeroInteiro * numeroDecimal); // Multiplicação de números.
 console.log(Math.pow(numeroInteiro, 2)); // Eleva um número ao quadrado (5^2).
 
 // 3. Boolean
-let teste = true; // Um valor booleano, que pode ser verdadeiro (true) ou falso (false), representando condições lógicas.
+let teste = true; // Um valor booleano, que pode ser verdadeiro (true) ou falso (false).
 let condicao = false;
 
 console.log(teste && condicao); // E lógico (false).
@@ -74,14 +74,14 @@ console.log(cumprimentar("Maria")); // Exibe "Olá, Maria"
 
 // 9. If statement
 if (teste) {
-    console.log("O teste é verdadeiro"); // A instrução 'if' executa um bloco de código se uma condição especificada for verdadeira.
+    console.log("O teste é verdadeiro"); // Executa um bloco de código se a condição especificada for verdadeira.
 }
 
 // 10. Else statement
 if (!teste) {
     console.log("O teste é falso");
 } else {
-    console.log("O teste é verdadeiro"); // A instrução 'else' executa um bloco de código se a condição na instrução 'if' for falsa.
+    console.log("O teste é verdadeiro"); // Executa um bloco de código se a condição na instrução 'if' for falsa.
 }
 
 // 11. For loop
@@ -109,18 +109,18 @@ switch (dia) {
         console.log("Quarta-feira");
         break;
     default:
-        console.log("Outro dia"); // A instrução 'switch' avalia uma expressão e executa o código com base no caso correspondente.
+        console.log("Outro dia"); // Avalia uma expressão e executa o código com base no caso correspondente.
 }
 
 // 14. Try-catch statement
 try {
     let resultado = operacaoArriscada(); // Tenta executar um código que pode gerar um erro.
 } catch (erro) {
-    console.log("Ocorreu um erro: " + erro.message); // A instrução 'try-catch' permite lidar com erros que podem ocorrer no código.
+    console.log("Ocorreu um erro: " + erro.message); // Permite lidar com erros que podem ocorrer no código.
 }
 
 // 15. Arrow function
-let somar = (a, b) => a + b; // Uma função de seta (arrow function) é uma sintaxe mais curta para escrever expressões de função.
+let somar = (a, b) => a + b; // Sintaxe mais curta para escrever expressões de função.
 console.log(somar(2, 3)); // Exibe 5
 
 // 16. Class

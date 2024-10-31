@@ -3,30 +3,31 @@
   <head>
     <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade em dispositivos móveis -->
-    <title>Documento</title> <!-- Título da aba do navegador -->
+    <title>Funções Callback em JavaScript</title> <!-- Título da aba do navegador -->
   </head>
   <body>
     <script>
       // Função que simula a recuperação de um artigo pelo ID
       function exibirArtigo(id, callbackSucesso, callbackErro) {
-        // Lógica: recuperar o id via requisição HTTP (simulado aqui)
-        if (false) { // Simula condição de sucesso ou erro (aqui sempre é falso)
-          // Chama a função de sucesso passando título e descrição
+        // Simula a lógica de recuperação do artigo através de uma requisição (aqui apenas simulado)
+        // A condição "false" simula um erro; troque por "true" para simular sucesso.
+        if (false) { // Aqui você pode alterar para 'true' para simular sucesso
+          // Chama a função de sucesso, passando título e descrição do artigo
           callbackSucesso(
             "Funções de Callback em JS", // Título do artigo
-            "Funções de callback são muito utilizadas..." // Descrição do artigo
+            "Funções de callback são muito utilizadas para gerenciar a execução assíncrona em JavaScript." // Descrição do artigo
           );
         } else {
-          // Chama a função de erro passando a mensagem de erro
-          callbackErro("Erro ao recuperar os dados");
+          // Chama a função de erro, passando uma mensagem de erro
+          callbackErro("Erro ao recuperar os dados"); // Mensagem de erro a ser exibida
         }
       }
 
       // Função de callback que exibe o artigo na página
       let callbackSucesso = function (titulo, desc) {
         document.write("<h1>" + titulo + "</h1>"); // Exibe o título como um cabeçalho
-        document.write("<hr />"); // Adiciona uma linha horizontal
-        document.write("<p>" + desc + "</p>"); // Exibe a descrição em um parágrafo
+        document.write("<hr />"); // Adiciona uma linha horizontal para separar o título da descrição
+        document.write("<p>" + desc + "</p>"); // Exibe a descrição do artigo em um parágrafo
       };
 
       // Função de callback que exibe uma mensagem de erro
@@ -34,8 +35,8 @@
         document.write('<p><b>Erro: </b>' + erro + '</p>'); // Exibe a mensagem de erro em negrito
       };
 
-      // Chama a função exibirArtigo passando o ID e as funções de callback
-      exibirArtigo(1, callbackSucesso, callbackErro);
+      // Chama a função exibirArtigo passando um ID e as funções de callback
+      exibirArtigo(1, callbackSucesso, callbackErro); // ID do artigo e as funções para manipulação do resultado
     </script>
   </body>
 </html>

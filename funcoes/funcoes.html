@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR"> <!-- Definindo o idioma como português do Brasil -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Funções em JavaScript</title> <!-- Título da aba do navegador -->
   </head>
   <body>
     <script>
       /* 
-      Função para calcular a área de um terreno
-      Recebe largura e comprimento como parâmetros e retorna a área
+      Função para calcular a área de um terreno.
+      Recebe largura e comprimento como parâmetros e retorna a área.
       let area = largura * comprimento;
       */
 
-      // function calcularAreaTerreno(largura, comprimento) {
-      //   let area = largura * comprimento;
-      //   return area;
-      // }
+      // Função comentada que calcula a área de um terreno
+      /*
+      function calcularAreaTerreno(largura, comprimento) {
+        let area = largura * comprimento;
+        return area;
+      }
 
       // Solicita ao usuário a largura e o comprimento do terreno
-      // let largura = prompt("Digite a largura do terreno em metros");
-      // let comprimento = prompt("Digite o comprimento do terreno em metros");
+      let largura = prompt("Digite a largura do terreno em metros");
+      let comprimento = prompt("Digite o comprimento do terreno em metros");
 
       // Calcula a área usando a função calcularAreaTerreno
-      // let area = calcularAreaTerreno(largura, comprimento);
+      let area = calcularAreaTerreno(largura, comprimento);
 
       // Exibe a área do terreno
-      // document.write("O terreno possui " + area + " metros quadrados"); 
+      document.write("O terreno possui " + area + " metros quadrados"); 
+      */
 
       // Função para somar dois números
       // Se b não for definido, considera como 0
@@ -36,10 +39,10 @@
       }
 
       // Exibe os resultados da soma
-      document.write(soma(7, 7)); // Exibe: 14
-      document.write(soma(7, 7, 9, 15)); // Exibe: 14 (ignora os valores extras)
-      document.write(soma(7)); // Exibe: 7 (b é considerado 0)
-      document.write(soma()); // Exibe: 0 (a e b são considerados 0)
+      document.write("Resultado da soma (7, 7): " + soma(7, 7) + "<br/>"); // Exibe: 14
+      document.write("Resultado da soma (7, 7, 9, 15): " + soma(7, 7, 9, 15) + "<br/>"); // Exibe: 14 (ignora os valores extras)
+      document.write("Resultado da soma (7): " + soma(7) + "<br/>"); // Exibe: 7 (b é considerado 0)
+      document.write("Resultado da soma (): " + soma() + "<br/>"); // Exibe: 0 (a e b são considerados 0)
     </script>
   </body>
 </html>

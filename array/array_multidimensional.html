@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <title>JavaScript - Array Multidimensional</title>
 
     <script>
-      // Inicializa um array chamado lista_coisas
-      const lista_coisas = Array();
+        // Início do conteúdo formatado
+        document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+        document.write('<h2>📊 Arrays Multidimensionais em JavaScript</h2>');
 
-      // Adiciona um array de frutas à lista_coisas
-      lista_coisas["frutas"] = Array("Banana", "Maçã", "Morango", "Uva");
+        // Inicializa um array chamado lista_coisas
+        const lista_coisas = Array();
 
-      // As linhas comentadas mostram como adicionar frutas manualmente
-      // lista_coisas['frutas'][1] = 'Banana'
-      // lista_coisas['frutas'][2] = 'Maçã'
-      // lista_coisas['frutas'][3] = 'Morango'
-      // lista_coisas['frutas'][4] = 'Uva'
+        // Adiciona um array de frutas à lista_coisas
+        lista_coisas["frutas"] = Array("Banana", "Maçã", "Morango", "Uva");
 
-      // Adiciona um array para pessoas
-      lista_coisas["pessoas"] = [];
-      lista_coisas["pessoas"]["a"] = "João"; // Adiciona 'João' na chave 'a'
-      lista_coisas["pessoas"]["b"] = "José"; // Adiciona 'José' na chave 'b'
-      lista_coisas["pessoas"]["c"] = "Maria"; // Adiciona 'Maria' na chave 'c'
+        // Comentários sobre a adição manual de frutas
+        // lista_coisas['frutas'][1] = 'Banana'; // Adiciona 'Banana' na posição 1
+        // lista_coisas['frutas'][2] = 'Maçã'; // Adiciona 'Maçã' na posição 2
+        // lista_coisas['frutas'][3] = 'Morango'; // Adiciona 'Morango' na posição 3
+        // lista_coisas['frutas'][4] = 'Uva'; // Adiciona 'Uva' na posição 4
 
-      // Exibe a lista completa no console
-      console.log(lista_coisas);
-      // Exibe o quarto elemento do array de frutas no console (index 3)
-      console.log(lista_coisas["frutas"][3]);
-      // Escreve o quarto elemento do array de frutas na página
-      document.write(lista_coisas["frutas"][3]);
-      // Escreve o valor associado à chave 'b' do array de pessoas na página
-      document.write(lista_coisas["pessoas"]["b"]);
+        // Adiciona um array para pessoas
+        lista_coisas["pessoas"] = [];
+        lista_coisas["pessoas"]["a"] = "João"; // Adiciona 'João' na chave 'a'
+        lista_coisas["pessoas"]["b"] = "José"; // Adiciona 'José' na chave 'b'
+        lista_coisas["pessoas"]["c"] = "Maria"; // Adiciona 'Maria' na chave 'c'
+
+        // Exibe a lista completa no console
+        console.log(lista_coisas);
+
+        // Exibe o quarto elemento do array de frutas no console (index 3)
+        console.log("Fruta na posição 3:", lista_coisas["frutas"][3]);
+
+        // Escreve o quarto elemento do array de frutas na página
+        document.write('<h3>Fruta na posição 3:</h3> ' + lista_coisas["frutas"][3] + '<br />'); // Uva
+
+        // Escreve o valor associado à chave 'b' do array de pessoas na página
+        document.write('<h3>Pessoa na chave "b":</h3> ' + lista_coisas["pessoas"]["b"] + '<br />'); // José
+
+        // Resumo das operações
+        document.write('<h3>📚 Resumo das Operações</h3>');
+        document.write('👉 Um array multidimensional pode conter arrays e objetos.<br>');
+        document.write('👉 Acessamos elementos em um array usando índices, como <code>lista_coisas["frutas"][3]</code>.<br>');
+        document.write('👉 Podemos adicionar itens a um array usando índices, como <code>lista_coisas["pessoas"]["a"] = "João"</code>.<br>');
+
+        document.write('</div>'); // Fecha o conteúdo formatado
     </script>
-  </head>
-
-  <body></body>
+</head>
+<body>
+</body>
 </html>

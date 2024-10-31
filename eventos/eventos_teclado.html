@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="utf-8" /> 
-    <title>JavaScript</title>
+    <title>Eventos de Teclado em JavaScript</title>
 
     <script>
-      // Função que exibe um alerta quando chamada
-      function acao1() {
-        alert("evento disparado"); // Exibe uma mensagem de alerta ao usuário
-      }
+        // Função que exibe um alerta quando chamada
+        function acao1() {
+            alert("Evento disparado"); // Exibe uma mensagem de alerta ao usuário
+        }
     </script>
-  </head>
-
-  <body>
+</head>
+<body>
     <!-- Campo de entrada de texto que dispara a função 'acao1' quando uma tecla é pressionada -->
-    <input onkeydown="acao1()" type="text" />
-  </body>
+    <input onkeydown="acao1()" type="text" placeholder="Pressione uma tecla" />
+    <!-- Placeholder para indicar ao usuário que ele deve pressionar uma tecla -->
+</body>
 </html>

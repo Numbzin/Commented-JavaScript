@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manipulação de Arrays em JavaScript</title>
     <script>
+        // Início do conteúdo formatado
+        document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+        document.write('<h2>📦 Manipulação de Arrays: Incluir e Remover Elementos</h2>');
+
         // Inicializa um array vazio
         let lista_coisas = Array();
 
@@ -12,28 +16,76 @@
         lista_coisas['frutas'] = Array(); // Cria um array para frutas
         lista_coisas['pessoas'] = []; // Cria um array vazio para pessoas
 
+        // ===============================================
+        // Adicionando Elementos ao Array de Frutas
+        // ===============================================
+        document.write('<h3>1️⃣ Adicionando Elementos ao Array de Frutas</h3>');
+
         // Adiciona elementos ao array de frutas
         lista_coisas['frutas'].push('Banana'); // Adiciona 'Banana' ao final do array
+        document.write('Adicionada fruta: Banana<br />');
+
         lista_coisas['frutas'].unshift('Uva'); // Adiciona 'Uva' ao início do array
+        document.write('Adicionada fruta: Uva<br />');
 
-        // Exibe a lista de coisas no console
-        console.log(lista_coisas); // Mostra o estado atual de lista_coisas
+        // Exibe a lista de frutas no console
+        console.log('Frutas:', lista_coisas['frutas']); // Mostra o estado atual do array de frutas
 
-        // Comentários informativos sobre operações em arrays
-        // Info: incluir elemento no final do array
-        // lista_frutas.push('Uva'); // (Exemplo de inclusão ao final)
+        // ===============================================
+        // Adicionando Elementos ao Array de Pessoas
+        // ===============================================
+        document.write('<h3>2️⃣ Adicionando Elementos ao Array de Pessoas</h3>');
 
-        // Info: incluir no início
-        // lista_frutas.unshift('Uva'); // (Exemplo de inclusão no início)
+        // Adiciona elementos ao array de pessoas
+        lista_coisas['pessoas'].push('Alice'); // Adiciona 'Alice' ao final do array
+        document.write('Adicionada pessoa: Alice<br />');
 
-        // Info: excluir elemento do final
-        // lista_frutas.pop(); // (Exemplo de exclusão do final)
+        lista_coisas['pessoas'].unshift('Bob'); // Adiciona 'Bob' ao início do array
+        document.write('Adicionada pessoa: Bob<br />');
 
-        // Info: excluir do início
-        // lista_frutas.shift(); // (Exemplo de exclusão do início)
+        // Exibe a lista de pessoas no console
+        console.log('Pessoas:', lista_coisas['pessoas']); // Mostra o estado atual do array de pessoas
 
-        // Exibe a lista de coisas novamente após as operações
-        console.log(lista_coisas); // Mostra o estado atual de lista_coisas após as operações
+        // ===============================================
+        // Removendo Elementos do Array de Frutas
+        // ===============================================
+        document.write('<h3>3️⃣ Removendo Elementos do Array de Frutas</h3>');
+
+        // Remove o último elemento do array de frutas
+        lista_coisas['frutas'].pop(); 
+        document.write('Removida a última fruta.<br />');
+
+        // Remove o primeiro elemento do array de frutas
+        lista_coisas['frutas'].shift(); 
+        document.write('Removida a primeira fruta.<br />');
+
+        // Exibe a lista de frutas novamente após as operações
+        console.log('Frutas após remoções:', lista_coisas['frutas']); // Mostra o estado atual do array de frutas após as operações
+
+        // ===============================================
+        // Removendo Elementos do Array de Pessoas
+        // ===============================================
+        document.write('<h3>4️⃣ Removendo Elementos do Array de Pessoas</h3>');
+
+        // Remove o último elemento do array de pessoas
+        lista_coisas['pessoas'].pop();
+        document.write('Removida a última pessoa.<br />');
+
+        // Remove o primeiro elemento do array de pessoas
+        lista_coisas['pessoas'].shift();
+        document.write('Removida a primeira pessoa.<br />');
+
+        // Exibe a lista de pessoas novamente após as operações
+        console.log('Pessoas após remoções:', lista_coisas['pessoas']); // Mostra o estado atual do array de pessoas após as operações
+
+        // Resumo das operações
+        document.write('<h3>📚 Resumo das Operações</h3>');
+        document.write('👉 <code>push(elemento)</code> - Adiciona um elemento ao final do array.<br>');
+        document.write('👉 <code>unshift(elemento)</code> - Adiciona um elemento ao início do array.<br>');
+        document.write('👉 <code>pop()</code> - Remove o último elemento do array.<br>');
+        document.write('👉 <code>shift()</code> - Remove o primeiro elemento do array.<br>');
+
+        document.write('</div>'); // Fecha o conteúdo formatado
     </script>
 </head>
 <body>

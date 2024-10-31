@@ -1,7 +1,7 @@
 // Funções em JavaScript
 
 // As funções são blocos de código que realizam uma tarefa específica.
-// Elas podem ser definidas de várias maneiras e podem receber parâmetros e retornar valores.
+// Elas podem ser definidas de várias maneiras, receber parâmetros e retornar valores.
 
 // 1. Definindo uma Função Simples
 // Esta função exibe uma mensagem no console.

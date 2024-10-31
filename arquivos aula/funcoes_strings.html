@@ -2,29 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Funções de Strings em JavaScript</title>
     <script>
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>📝 Funções de Strings em JavaScript</h2>');
+      document.write('<p>Vamos aprender a manipular strings usando funções como <code>trim()</code>, <code>toUpperCase()</code>, <code>slice()</code> e outras.</p>');
+
+      // ===============================================
+      // EXEMPLO DE STRING INICIAL
+      // ===============================================
       let nome = ' Jorge Sant Ana ';
+      document.write('<h3>1️⃣ String Original</h3>');
+      document.write('String com espaços: -' + nome + '-<br>');
 
-      // Remove espaços em branco
+      // ===============================================
+      // REMOVENDO ESPAÇOS EM BRANCO
+      // ===============================================
+      document.write('<h3>2️⃣ Removendo Espaços em Branco</h3>');
+
+      // Remove espaços em branco no início e fim da string
       let nomeTrimmed = nome.trim();
+      document.write('String sem espaços: -' + nomeTrimmed + '-<br>');
+      document.write('<p><em>💡 <code>trim()</code> remove os espaços em branco no início e no final de uma string.</em></p>');
 
-      // Exibe a string sem espaços em branco
-      document.write('Nome: -' + nomeTrimmed + '-<br />');
+      // ===============================================
+      // OBTENDO O TAMANHO DA STRING
+      // ===============================================
+      document.write('<h3>3️⃣ Obtendo o Tamanho da String</h3>');
 
-      // Exibe o tamanho da string
-      document.write('Tamanho: ' + nomeTrimmed.length + ' caracteres<br />');
+      // Exibe o número de caracteres na string
+      document.write('Tamanho: ' + nomeTrimmed.length + ' caracteres<br>');
+      document.write('<p><em>💡 <code>length</code> retorna o número de caracteres na string.</em></p>');
 
-      // Converte para maiúsculas
-      document.write('Maiúsculas: ' + nomeTrimmed.toUpperCase() + '<br />');
+      // ===============================================
+      // CONVERTENDO PARA MAIÚSCULAS E MINÚSCULAS
+      // ===============================================
+      document.write('<h3>4️⃣ Convertendo para Maiúsculas e Minúsculas</h3>');
 
-      // Converte para minúsculas
-      document.write('Minúsculas: ' + nomeTrimmed.toLowerCase() + '<br />');
+      // Converte toda a string para letras maiúsculas
+      document.write('Maiúsculas: ' + nomeTrimmed.toUpperCase() + '<br>');
 
-      // Exibe os primeiros 5 caracteres
-      document.write('Primeiros 5 caracteres: ' + nomeTrimmed.slice(0, 5) + '<br />');
+      // Converte toda a string para letras minúsculas
+      document.write('Minúsculas: ' + nomeTrimmed.toLowerCase() + '<br>');
+      document.write('<p><em>💡 <code>toUpperCase()</code> transforma a string em maiúsculas e <code>toLowerCase()</code> em minúsculas.</em></p>');
+
+      // ===============================================
+      // OBTENDO PARTE DA STRING
+      // ===============================================
+      document.write('<h3>5️⃣ Obtendo Parte da String</h3>');
+
+      // Exibe os primeiros 5 caracteres da string
+      document.write('Primeiros 5 caracteres: ' + nomeTrimmed.slice(0, 5) + '<br>');
+      document.write('<p><em>💡 <code>slice(início, fim)</code> extrai parte da string do índice <code>início</code> ao <code>fim</code> (exclusivo).</em></p>');
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resumo das Funções de Strings Utilizadas</h3>');
+      
+      document.write('<p><strong>Principais funções de strings:</strong></p>');
+      document.write('👉 <code>trim()</code> - Remove espaços em branco nas bordas<br>');
+      document.write('👉 <code>length</code> - Obtém o comprimento da string<br>');
+      document.write('👉 <code>toUpperCase()</code> - Converte a string para maiúsculas<br>');
+      document.write('👉 <code>toLowerCase()</code> - Converte a string para minúsculas<br>');
+      document.write('👉 <code>slice()</code> - Extrai parte da string<br>');
+
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('⚠️ Lembre-se de que índices em strings começam no 0<br>');
+      document.write('⚠️ <code>slice()</code> usa o índice inicial e final; o final é não-inclusivo<br>');
+      
+      document.write('</div>');
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>

@@ -1,6 +1,7 @@
 // Manipulação do DOM em JavaScript
 
-// O DOM (Document Object Model) é uma interface de programação que permite que scripts acessem e atualizem o conteúdo, estrutura e estilo de documentos HTML e XML.
+// O DOM (Document Object Model) é uma interface de programação que permite que scripts
+// acessem e atualizem o conteúdo, estrutura e estilo de documentos HTML e XML.
 // Abaixo, vamos demonstrar várias operações comuns que podemos realizar no DOM.
 
 // 1. Acessando elementos do DOM

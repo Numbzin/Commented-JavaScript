@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa em Arrays com JavaScript</title>
+    <script>
+        // Inicializa um array para armazenar frutas
+        let lista_frutas = Array();
 
-  <script>
-    // Inicializa um array para armazenar frutas
-    let lista_frutas = Array();
+        // Adiciona frutas ao array
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã'; 
+        lista_frutas[2] = 'Morango';
+        lista_frutas[3] = 'Uva';
 
-    // Adiciona frutas ao array
-    lista_frutas[0] = 'Banana';
-    lista_frutas[1] = 'Maçã'; 
-    lista_frutas[2] = 'Morango';
-    lista_frutas[3] = 'Uva';
+        // Função para pesquisar uma fruta no array
+        function pesquisaFruta(fruta) {
+            // Retorna a posição da fruta no array
+            return lista_frutas.indexOf(fruta);
+        }
 
-    // Exibe a posição do elemento 'Morango' no console (deve retornar 2)
-    console.log(lista_frutas.indexOf('Morango'));
+        // Fruta a ser pesquisada
+        let frutaParaPesquisar = 'Morango';
 
-    // Exibe a posição do elemento 'Abacaxi' no console (deve retornar -1, pois não existe)
-    console.log(lista_frutas.indexOf('Abacaxi')); //retorna -1
+        // Exibe a posição do elemento 'Morango' no console (deve retornar 2)
+        console.log(frutaParaPesquisar + ' está na posição: ' + pesquisaFruta(frutaParaPesquisar));
 
-    // Armazena a posição da fruta 'Banana' em uma variável
-    let auxiliar = lista_frutas.indexOf('Banana');
+        // Fruta que não existe no array
+        frutaParaPesquisar = 'Abacaxi';
 
-    // Verifica se a fruta existe no array
-    if (auxiliar === -1) {
-      console.log('Elemento não existe');
-    } else {
-      console.log('Elemento existe e está na posição ' + auxiliar); // Exibe a posição da 'Banana'
-    }
+        // Exibe a posição do elemento 'Abacaxi' no console (deve retornar -1, pois não existe)
+        console.log(frutaParaPesquisar + ' está na posição: ' + pesquisaFruta(frutaParaPesquisar)); //retorna -1
 
-    // Lembre-se, a pesquisa é case sensitive!
-  </script>
+        // Armazena a posição da fruta 'Banana' em uma variável
+        let auxiliar = pesquisaFruta('Banana');
 
+        // Verifica se a fruta existe no array
+        if (auxiliar === -1) {
+            console.log('Elemento não existe');
+        } else {
+            console.log('Elemento existe e está na posição ' + auxiliar); // Exibe a posição da 'Banana'
+        }
+
+        // Lembre-se, a pesquisa é case sensitive!
+    </script>
 </head>
 
 <body>
+    <h2>Pesquisa de Frutas em um Array</h2>
+    <p>Abra o console para ver os resultados da pesquisa!</p>
 </body>
-
 </html>

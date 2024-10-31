@@ -2,35 +2,109 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Funções Callback em JavaScript</title>
     <script>
-      // Função que simula a recuperação de um artigo
-      function exibirArtigo(id, callbackSucesso, callbackErro) {
-        // Lógica: simula a recuperação do id via requisição http
-        if (false) { // Esta condição deve ser verdadeira para simular um sucesso
-          callbackSucesso('Funções de callback em JS', 'Funções de callback são muito utilizadas....');
-        } else {
-          callbackErro('Erro ao recuperar os dados');
-        }
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>📞 Funções Callback em JavaScript</h2>');
+      document.write('<p>Vamos aprender sobre funções que são chamadas dentro de outras funções!</p>');
+
+      // ===============================================
+      // EXEMPLO SIMPLES DE CALLBACK
+      // ===============================================
+      document.write('<h3>1️⃣ Exemplo Simples</h3>');
+      
+      function fazerAlgo(callback) {
+          let nome = "Maria";
+          callback(nome); // Chama a função que foi passada como parâmetro
       }
 
-      // Callback para o caso de sucesso
-      let callbackSucesso = function(titulo, descricao) {
-        document.write('<h1>' + titulo + '</h1>');
-        document.write('<hr />');
-        document.write('<p>' + descricao + '</p>');
+      function dizOla(nome) {
+          document.write(`Olá ${nome}!<br>`);
+      }
+
+      document.write('Chamando fazerAlgo com callback dizOla:<br>');
+      fazerAlgo(dizOla);
+      document.write('<p><em>💡 A função dizOla é passada como callback para fazerAlgo</em></p>');
+
+      // ===============================================
+      // EXEMPLO PRÁTICO: SISTEMA DE NOTIFICAÇÕES
+      // ===============================================
+      document.write('<h3>2️⃣ Exemplo Prático: Sistema de Notificações</h3>');
+
+      function enviarMensagem(mensagem, sucesso, erro) {
+          // Simula um envio de mensagem que pode dar certo ou errado
+          let enviouComSucesso = Math.random() > 0.5; // 50% de chance de sucesso
+          
+          if (enviouComSucesso) {
+              sucesso(`Mensagem "${mensagem}" enviada com sucesso!`);
+          } else {
+              erro('Ops! Não foi possível enviar a mensagem.');
+          }
+      }
+
+      // Funções de callback para sucesso e erro
+      function mensagemEnviada(resposta) {
+          document.write(`<p style="color: green">✔️ ${resposta}</p>`);
+      }
+
+      function mensagemErro(erro) {
+          document.write(`<p style="color: red">❌ ${erro}</p>`);
+      }
+
+      document.write('Tentando enviar uma mensagem...<br>');
+      enviarMensagem("Olá, mundo!", mensagemEnviada, mensagemErro);
+
+      // ===============================================
+      // CALLBACKS COM ARROW FUNCTIONS
+      // ===============================================
+      document.write('<h3>3️⃣ Callbacks com Arrow Functions</h3>');
+
+      function processarNumero(numero, callbacks) {
+          if (numero > 0) {
+              callbacks.positivo(`O número ${numero} é positivo!`);
+          } else if (numero < 0) {
+              callbacks.negativo(`O número ${numero} é negativo!`);
+          } else {
+              callbacks.zero('O número é zero!');
+          }
+      }
+
+      // Usando arrow functions como callbacks
+      let callbacks = {
+          positivo: (msg) => document.write(`<p style="color: blue">${msg}</p>`),
+          negativo: (msg) => document.write(`<p style="color: red">${msg}</p>`),
+          zero: (msg) => document.write(`<p style="color: gray">${msg}</p>`)
       };
 
-      // Callback para o caso de erro
-      let callbackErro = function(erro) { 
-        document.write('<p><b>Erro:</b>' + erro + '</p>');
-      };
+      document.write('Processando diferentes números:<br>');
+      processarNumero(5, callbacks);
+      processarNumero(-3, callbacks);
+      processarNumero(0, callbacks);
 
-      // Chamada da função, passando o id e os callbacks
-      exibirArtigo(1, callbackSucesso, callbackErro);
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resuminho</h3>');
+      document.write('<p><strong>Callback é uma função que é passada como parâmetro para outra função!</strong></p>');
+      
+      document.write('👉 Casos comuns de uso:<br>');
+      document.write('- Tratamento de sucesso/erro<br>');
+      document.write('- Eventos de clique, tecla pressionada, etc<br>');
+      document.write('- Processamento assíncrono<br><br>');
+      
+      document.write('👉 Formas de criar callbacks:<br>');
+      document.write('- Função normal: <code>function(param) { ... }</code><br>');
+      document.write('- Arrow function: <code>(param) => { ... }</code><br>');
+      
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('✨ Callbacks são muito usados para tratar sucesso e erro<br>');
+      document.write('✨ Você pode passar várias funções callback diferentes<br>');
+      document.write('✨ Callbacks ajudam a tornar seu código mais flexível<br>');
+      document.write('⚠️ Cuidado com o "callback hell" (muitos callbacks aninhados)<br>');
+
+      document.write('</div>');
     </script>
   </head>
-
   <body>
   </body>
 </html>

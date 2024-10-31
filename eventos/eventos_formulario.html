@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>JavaScript</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Formulário em JavaScript</title>
+    <script>
+        // Função chamada quando o campo de entrada recebe foco
+        function onFocusInput() {
+            console.log('Recebeu o foco'); // Exibe mensagem no console
+        }
 
-    <script></script> <!-- Espaço reservado para incluir scripts JavaScript adicionais -->
-  </head>
+        // Função chamada quando o campo de entrada perde foco
+        function onBlurInput() {
+            console.log('Perdeu o foco'); // Exibe mensagem no console
+        }
 
-  <body>
-    <!-- Campo de entrada de texto -->
+        // Função chamada quando a opção selecionada do menu suspenso é alterada
+        function onChangeSelect() {
+            console.log('Estado foi modificado'); // Exibe mensagem no console
+        }
+    </script>
+</head>
+<body>
+    <h3>Formulário com Eventos</h3>
+
+    <!-- Campo de entrada de texto com eventos de foco e perda de foco -->
     <input
-      onfocus="console.log('recebeu o foco')" <!-- Evento que é acionado quando o campo recebe o foco -->
-      onblur="console.log('perdeu o foco')" <!-- Evento que é acionado quando o campo perde o foco -->
-      type="text"
-    />
+        type="text" 
+        placeholder="Digite algo..." 
+        onfocus="onFocusInput()" 
+        onblur="onBlurInput()" >
 
-    <!-- Menu suspenso (select) com opções -->
-    <select onchange="console.log('Estado foi modificado')"> <!-- Evento que é acionado quando a opção selecionada é alterada -->
-      <option>-- Selecione --</option> <!-- Opção padrão que solicita ao usuário selecionar uma opção -->
-      <option value="1">Primeira opção</option> <!-- Primeira opção do menu -->
-      <option value="2">Segunda opção</option> <!-- Segunda opção do menu -->
+
+    <hr />
+
+    <!-- Menu suspenso (select) com evento de mudança -->
+    <select onchange="onChangeSelect()"> <!-- Chama a função onChangeSelect() quando a opção é alterada -->
+        <option>-- Selecione --</option> <!-- Opção padrão que solicita ao usuário escolher -->
+        <option value="1">Primeira opção</option> <!-- Primeira opção do menu -->
+        <option value="2">Segunda opção</option> <!-- Segunda opção do menu -->
     </select>
-  </body>
+</body>
 </html>

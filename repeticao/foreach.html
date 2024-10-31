@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemplo de forEach em JavaScript</title>
     <script>
-        // O código abaixo inicializa um array para armazenar nomes de funcionários
-        // let listaFuncionarios = ['AB', 'João', 'Lucas', 'Fernanda', 'Maria']
-
-        // Cria um array vazio chamado listaFuncionarios
+        // ===============================================
+        // USANDO O MÉTODO forEach EM ARRAYS
+        // ===============================================
+        
+        // O código abaixo inicializa um array vazio chamado listaFuncionarios
         let listaFuncionarios = Array();
 
         // Adiciona elementos ao array usando chaves não convencionais
-        listaFuncionarios['x'] = 'AB';          // Adiciona 'AB' com a chave 'x'
+        listaFuncionarios['x'] = 'AB';          // Adiciona 'AB' com a chave 'x' (não será contado no forEach)
         listaFuncionarios[false] = 'João';      // Adiciona 'João' com a chave false (equivale a 0)
         listaFuncionarios[3] = 'Lucas';         // Adiciona 'Lucas' na posição 3
         listaFuncionarios[27] = 'Fernanda';     // Adiciona 'Fernanda' na posição 27
-        listaFuncionarios[-12] = 'Maria';       // Adiciona 'Maria' com a chave -12
+        listaFuncionarios[-12] = 'Maria';       // Adiciona 'Maria' com a chave -12 (não será contado no forEach)
 
         // Define uma função que será usada como callback no forEach
         let f = function(valor, indice) {
-            console.log(valor, indice); // Exibe o valor e o índice no console
+            // Exibe o valor e o índice no console
+            console.log('Valor:', valor, '| Índice:', indice); 
         }
 
         // Usa o método forEach para iterar sobre listaFuncionarios
@@ -33,10 +35,10 @@
 
         // Usa o método forEach para modificar o array
         listaFuncionarios.forEach(function(valor, indice, array) {
-            console.log('indice: ' + indice + ' | valor: ' + valor); // Exibe o índice e o valor
+            console.log('Índice:', indice, '| Valor:', valor); // Exibe o índice e o valor
 
             // Se o valor for 'Lucas', altera seu valor no array
-            if(valor == 'Lucas') {
+            if (valor == 'Lucas') {
                 array[indice] = 'Um novo valor'; // Substitui 'Lucas' por 'Um novo valor'
             }
         });

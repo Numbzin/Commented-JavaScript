@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemplo de Laço For em JavaScript</title>
     <script>
+        // ===============================================
+        // ESTRUTURAS DE REPETIÇÃO EM JAVASCRIPT
+        // ===============================================
+        
         /*
-        Estruturas de repetição em JavaScript:
-
-        while (condição) {
+        As estruturas de repetição são usadas para executar um bloco de código várias vezes, 
+        enquanto uma condição for verdadeira.
+        
+        Exemplos:
+        
+        1. while (condição) {
             // Código a ser executado enquanto a condição for verdadeira
         }
 
-        do {
+        2. do {
             // Código a ser executado pelo menos uma vez
         } while (condição);
+
+        3. for (inicialização; condição; incremento) {
+            // Código a ser executado enquanto a condição for verdadeira
+        }
         */
 
         // Laço for que inicializa a variável x em 10 e diminui em 4 a cada iteração
@@ -23,9 +34,15 @@
             document.write(x + '<br />');
 
             // Exemplos de controle de fluxo:
-            // break: termina o loop imediatamente
-            // continue: pula para a próxima iteração do loop
+            // 'break': termina o loop imediatamente, interrompendo a execução.
+            // 'continue': pula a iteração atual e vai para a próxima.
         }
+
+        // Neste exemplo, o loop começa com x igual a 10 e diminui de 4 em 4, exibindo:
+        // 10
+        // 6
+        // 2
+        // O loop termina quando x é menor que 0.
     </script>
 </head>
 <body>

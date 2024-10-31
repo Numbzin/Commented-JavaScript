@@ -2,18 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Funções Anônimas em JavaScript</title>
     <script>
-      // Declaração de uma função anônima atribuída à variável exibirSaudacao
-      let exibirSaudacao = function(nome) {
-        document.write('Olá ' + nome + ', tudo bem?'); // Exibe uma saudação personalizada
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>🎭 Funções Anônimas em JavaScript</h2>');
+      document.write('<p>Vamos aprender sobre funções que não têm nome!</p>');
+
+      // ===============================================
+      // COMPARAÇÃO: FUNÇÃO NORMAL VS ANÔNIMA
+      // ===============================================
+      document.write('<h3>1️⃣ Função Normal (Com Nome)</h3>');
+      
+      // Função normal
+      function dizOla(nome) {
+          return `Olá ${nome}!`;
+      }
+      document.write('Função normal: ' + dizOla('Maria') + '<br>');
+      document.write('<p><em>💡 Função normal tem seu próprio nome: dizOla</em></p>');
+
+      // ===============================================
+      // FUNÇÃO ANÔNIMA BÁSICA
+      // ===============================================
+      document.write('<h3>2️⃣ Função Anônima</h3>');
+      
+      let saudacao = function(nome) {
+          return `Oi ${nome}, tudo bem?`;
+      };
+      document.write('Função anônima: ' + saudacao('João') + '<br>');
+      document.write('<p><em>💡 Função anônima é guardada em uma variável</em></p>');
+
+      // ===============================================
+      // FUNÇÃO ANÔNIMA MODERNA (ARROW FUNCTION)
+      // ===============================================
+      document.write('<h3>3️⃣ Função Anônima Moderna (Arrow Function)</h3>');
+      
+      let cumprimento = (nome) => `Bem-vindo(a) ${nome}!`;
+      document.write('Arrow function: ' + cumprimento('Ana') + '<br>');
+      document.write('<p><em>💡 Arrow function é uma forma mais curta de escrever</em></p>');
+
+      // ===============================================
+      // EXEMPLO PRÁTICO
+      // ===============================================
+      document.write('<h3>🎯 Exemplo Prático</h3>');
+      
+      // Função que calcula desconto
+      let calcularDesconto = function(preco, percentual) {
+          let desconto = preco * (percentual/100);
+          return preco - desconto;
       };
 
-      // Chamada da função passando o argumento 'Jorge'
-      exibirSaudacao('Jorge');
+      let precoFinal = calcularDesconto(100, 10);
+      document.write(`Produto de R$100 com 10% de desconto: R$${precoFinal}<br>`);
+
+      // Mesma função como arrow function
+      let calcularDescontoArrow = (preco, percentual) => preco - (preco * percentual/100);
+      
+      let precoFinalArrow = calcularDescontoArrow(100, 10);
+      document.write(`Mesmo cálculo com arrow function: R$${precoFinalArrow}`);
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resuminho</h3>');
+      document.write('<p><strong>Função Anônima é uma função sem nome que guardamos em uma variável!</strong></p>');
+      
+      document.write('👉 Forma tradicional:<br>');
+      document.write('<code>let minhaFuncao = function(parametro) { ... };</code><br><br>');
+      
+      document.write('👉 Forma moderna (Arrow Function):<br>');
+      document.write('<code>let minhaFuncao = (parametro) => { ... };</code><br>');
+      
+      document.write('<br><p><strong>Quando usar?</strong></p>');
+      document.write('✨ Quando você só vai usar a função em um lugar específico<br>');
+      document.write('✨ Quando você quer guardar uma função em uma variável<br>');
+      document.write('✨ Em eventos e callbacks (veremos mais sobre isso depois!)<br>');
+
+      document.write('<br><p><strong>Dicas:</strong></p>');
+      document.write('⚠️ Não esqueça o ponto e vírgula no final da declaração<br>');
+      document.write('⚠️ Arrow functions são mais curtas, mas fazem a mesma coisa<br>');
+      document.write('⚠️ Você pode usar qualquer uma das formas, escolha a que achar mais clara!<br>');
+
+      document.write('</div>');
     </script>
   </head>
-
   <body>
   </body>
 </html>

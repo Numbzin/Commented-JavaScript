@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemplo de for...in em JavaScript</title>
     <script>
-        // O código abaixo inicializa um array para armazenar convidados
-        // let listaConvidados = ['Jorge', 'NMB', 'AB', 'Ana', 'Maria']
-
-        // Cria um array vazio chamado listaConvidados
+        // ===============================================
+        // USANDO O LOOP for...in EM ARRAYS
+        // ===============================================
+        
+        // O código abaixo inicializa um array vazio chamado listaConvidados
         let listaConvidados = Array();
 
         // Adiciona elementos ao array usando chaves não convencionais
@@ -22,9 +23,9 @@
         console.log(listaConvidados);
 
         // O loop 'for...in' itera sobre as chaves do objeto (array) listaConvidados
-        for(let x in listaConvidados) {
+        for (let x in listaConvidados) {
             // Exibe no console o índice (ou chave) e o valor correspondente
-            console.log('Índice ' + x + ' valor ' + listaConvidados[x]);
+            console.log('Índice ' + x + ' | Valor: ' + listaConvidados[x]);
         }
     </script>
 </head>

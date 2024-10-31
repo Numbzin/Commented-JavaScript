@@ -2,18 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Funções em JavaScript</title>
     <script>
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>🧮 Funções em JavaScript</h2>');
+      document.write('<p>Aprenda a criar funções para organizar e reutilizar seu código! Vamos calcular a área de um terreno com uma função.</p>');
+
+      // ===============================================
+      // DEFININDO A FUNÇÃO
+      // ===============================================
+      document.write('<h3>1️⃣ Definindo a Função</h3>');
+
       // Função para calcular a área do terreno
       function calcularAreaTerreno(largura, comprimento) {
         // Lógica para calcular a área
         let area = largura * comprimento;
-        return area; // Retorna o valor da área
+        return area; // Retorna o valor da área calculada
       }
+
+      document.write('<p><em>💡 A função <code>calcularAreaTerreno()</code> recebe dois parâmetros: largura e comprimento, calcula a área multiplicando-os e retorna o resultado.</em></p>');
+
+      // ===============================================
+      // SOLICITANDO DADOS DO USUÁRIO
+      // ===============================================
+      document.write('<h3>2️⃣ Solicitando Dados do Usuário</h3>');
 
       // Solicita a largura e o comprimento do terreno
       let largura = parseFloat(prompt('Digite a largura do terreno em metros'));
       let comprimento = parseFloat(prompt('Digite o comprimento do terreno em metros'));
+
+      document.write('<p>O usuário insere os valores de <code>largura</code> e <code>comprimento</code> do terreno através de prompts.</p>');
+
+      // ===============================================
+      // VALIDANDO OS DADOS DE ENTRADA
+      // ===============================================
+      document.write('<h3>3️⃣ Validando os Dados de Entrada</h3>');
 
       // Verifica se os valores são válidos
       if (isNaN(largura) || isNaN(comprimento) || largura <= 0 || comprimento <= 0) {
@@ -24,8 +47,27 @@
         // Exibe a área calculada
         document.write('O terreno possui ' + area.toFixed(2) + ' metros quadrados.');
       }
+
+      document.write('<p><em>💡 Usamos <code>isNaN()</code> para verificar se a entrada é um número e confirmamos que os valores são maiores que zero.</em></p>');
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resumo sobre Funções</h3>');
+
+      document.write('<p><strong>O que aprendemos:</strong></p>');
+      document.write('👉 <code>function nomeDaFuncao(parametros)</code> - Define uma função com parâmetros opcionais<br>');
+      document.write('👉 <code>return</code> - Retorna um valor da função para onde ela foi chamada<br>');
+      document.write('👉 <code>isNaN(valor)</code> - Verifica se o valor não é um número<br>');
+      document.write('👉 <code>toFixed(n)</code> - Define o número de casas decimais<br>');
+
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('⚠️ Defina funções para organizar o código e facilitar a reutilização<br>');
+      document.write('⚠️ Use <code>return</code> para devolver resultados das funções<br>');
+      document.write('⚠️ Valide entradas do usuário para evitar erros no cálculo<br>');
+
+      document.write('</div>');
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>

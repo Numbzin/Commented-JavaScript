@@ -2,33 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Variáveis em JavaScript - Parte 2</title>
     <script>
-      // Declaração de variáveis
+      // Início do conteúdo formatado
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>📦 Variáveis em JavaScript - Parte 2</h2>');
+      document.write('<p>Vamos explorar os tipos de variáveis <code>null</code> e <code>undefined</code> em JavaScript!</p>');
+
+      // ===============================================
+      // DECLARAÇÃO DE VARIÁVEIS
+      // ===============================================
+      document.write('<h3>1️⃣ Declaração de Variáveis</h3>');
 
       // null: representa a ausência intencional de um valor
       let teste = null; 
+      document.write('<p><strong>null:</strong> representa a ausência intencional de um valor. Neste caso, a variável <code>teste</code> é inicializada como <code>' + teste + '</code>.</p>');
 
       // undefined: uma variável que foi declarada, mas não inicializada
       let teste2; 
+      document.write('<p><strong>undefined:</strong> é o valor padrão para variáveis que foram declaradas, mas não inicializadas. A variável <code>teste2</code> está atualmente como <code>' + teste2 + '</code>.</p>');
+
+      // ===============================================
+      // EXIBIÇÃO DOS VALORES
+      // ===============================================
+      document.write('<h3>2️⃣ Exibindo os Valores</h3>');
 
       // Exibe o valor da variável 'teste' no console (neste caso, será null)
       console.log(teste); 
+      document.write('<p><em>💡 O valor da variável <code>teste</code> (que é <code>null</code>) foi exibido no console do navegador.</em></p>');
 
       // Modifica o valor da variável 'teste'
       teste = 'Valor modificado com sucesso'; 
+      document.write('<p><strong>Modificando o valor:</strong> O valor da variável <code>teste</code> agora é: <code>' + teste + '</code>.</p>');
 
       // Exibe o novo valor da variável 'teste' no console
       console.log(teste); 
 
       // Modifica o valor da variável 'teste' para um número fracionado
       teste = 127.48; 
+      document.write('<p><strong>Alterando o valor novamente:</strong> O valor da variável <code>teste</code> agora é: <code>' + teste + '</code>.</p>');
 
       // Exibe o valor atualizado da variável 'teste' no console
       console.log(teste); 
+
+      document.write('</div>'); // Fecha o conteúdo formatado
     </script>
   </head>
-
+  
   <body>
+    <h1>Variáveis - Parte 2</h1>
   </body>
 </html>

@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <title>Juntando Textos em JavaScript (Concatenação)</title>
     <script>
-      // Solicita ao usuário que digite seu nome e idade
-      let nome = prompt("Digite o seu nome:");
-      let idade = prompt("Digite a sua idade:");
-      let idade2 = 50; // Uma variável adicional para demonstração
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>🔤 Juntando Textos em JavaScript (Concatenação)</h2>');
+      document.write('<p>Vamos aprender diferentes formas de juntar textos!</p>');
 
-      // Exibe as idades no console
-      console.log(idade);   // Saída: idade do usuário
-      console.log(idade2);  // Saída: 50
+      // ===============================================
+      // FORMA TRADICIONAL COM +
+      // ===============================================
+      document.write('<h3>1️⃣ Juntando com o sinal de +</h3>');
+      
+      let nome = "João";
+      let idade = 25;
+      
+      let mensagem = "Olá " + nome + ", você tem " + idade + " anos!";
+      document.write('Resultado: ' + mensagem + '<br>');
+      document.write('<p><em>💡 Usamos + para juntar diferentes partes do texto</em></p>');
 
-      // Concatena strings e exibe uma mensagem personalizada
-      document.write(
-        "<h1>Olá " +
-          nome +
-          ", tudo bem? Estou vendo aqui que você possui " +
-          idade +
-          " anos.</h1>"
-      );
+      // ===============================================
+      // FORMA MODERNA COM TEMPLATE STRING
+      // ===============================================
+      document.write('<h3>2️⃣ Usando Template String (Forma Moderna)</h3>');
+      
+      let mensagemModerna = `Olá ${nome}, você tem ${idade} anos!`;
+      document.write('Resultado: ' + mensagemModerna + '<br>');
+      document.write('<p><em>💡 Usamos ` (acento grave) e ${} para inserir variáveis no texto</em></p>');
+
+      // ===============================================
+      // EXEMPLO PRÁTICO COM PROMPT
+      // ===============================================
+      document.write('<h3>🎯 Exemplo Prático</h3>');
+      document.write('Veja como funciona com dados do usuário:<br><br>');
+      
+      // Solicita informações do usuário
+      let seuNome = prompt('Digite seu nome:');
+      let suaIdade = prompt('Digite sua idade:');
+      
+      // Forma tradicional
+      document.write('Forma tradicional:<br>');
+      document.write('Olá ' + seuNome + ', você tem ' + suaIdade + ' anos!<br><br>');
+      
+      // Forma moderna
+      document.write('Forma moderna:<br>');
+      document.write(`Olá ${seuNome}, você tem ${suaIdade} anos!<br>`);
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resuminho</h3>');
+      document.write('<p>Para juntar textos em JavaScript você pode:</p>');
+      
+      document.write('👉 Usar o sinal de + (forma tradicional):<br>');
+      document.write('<code>"texto " + variavel + " mais texto"</code><br><br>');
+      
+      document.write('👉 Usar template string (forma moderna):<br>');
+      document.write('<code>`texto ${variavel} mais texto`</code><br>');
+      
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('✨ Template strings são mais fáceis de ler e escrever<br>');
+      document.write('✨ Use template strings quando precisar inserir variáveis no meio do texto<br>');
+      document.write('✨ Lembre-se que o template string usa acento grave (`) e não aspas<br>');
+
+      document.write('</div>');
     </script>
   </head>
-
-  <body></body>
+  <body>
+  </body>
 </html>

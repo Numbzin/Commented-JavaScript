@@ -2,30 +2,104 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Trabalhando com Datas em JavaScript</title>
     <script>
-      // Criação de um novo objeto de data
-      let data = new Date();
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>📅 Trabalhando com Datas em JavaScript</h2>');
+      document.write('<p>Vamos aprender como criar e formatar datas!</p>');
 
-      // Função para formatar o número com zero à esquerda
-      function formatarNumero(numero) {
-        return numero < 10 ? '0' + numero : numero;
+      // ===============================================
+      // CRIANDO DATAS
+      // ===============================================
+      document.write('<h3>1️⃣ Criando Datas</h3>');
+      
+      // Data atual
+      let dataAtual = new Date();
+      document.write('Data completa atual: ' + dataAtual + '<br>');
+
+      // Criando data específica
+      let dataEspecifica = new Date(2024, 0, 1); // 1º de Janeiro de 2024
+      document.write('Data específica: ' + dataEspecifica + '<br>');
+      document.write('<p><em>💡 Em JavaScript, os meses começam do 0 (Janeiro é 0, Dezembro é 11)</em></p>');
+
+      // ===============================================
+      // PEGANDO PARTES DA DATA
+      // ===============================================
+      document.write('<h3>2️⃣ Pegando Partes da Data</h3>');
+      
+      let data = new Date();
+      document.write(`Dia: ${data.getDate()}<br>`);
+      document.write(`Mês: ${data.getMonth() + 1}<br>`); // +1 porque começa do 0
+      document.write(`Ano: ${data.getFullYear()}<br>`);
+      document.write(`Hora: ${data.getHours()}<br>`);
+      document.write(`Minutos: ${data.getMinutes()}<br>`);
+      document.write(`Segundos: ${data.getSeconds()}<br>`);
+
+      // ===============================================
+      // FORMATANDO DATAS
+      // ===============================================
+      document.write('<h3>3️⃣ Formatando Datas</h3>');
+
+      // Função para adicionar zero à esquerda
+      function addZero(numero) {
+          return numero < 10 ? '0' + numero : numero;
       }
 
-      // Formatação da data
-      let dia = formatarNumero(data.getDate());
-      let mes = formatarNumero(data.getMonth() + 1);
+      // Formatando data no padrão brasileiro (dia/mês/ano)
+      let dia = addZero(data.getDate());
+      let mes = addZero(data.getMonth() + 1);
       let ano = data.getFullYear();
+      
+      document.write(`Data formatada: ${dia}/${mes}/${ano}<br>`);
 
-      // Criar um elemento para exibir a data
-      let dataFormatada = document.createElement('h1');
-      dataFormatada.textContent = dia + '/' + mes + '/' + ano;
+      // Formatando hora
+      let hora = addZero(data.getHours());
+      let minutos = addZero(data.getMinutes());
+      
+      document.write(`Hora formatada: ${hora}:${minutos}<br>`);
 
-      // Adicionar o elemento ao corpo da página
-      document.body.appendChild(dataFormatada);
+      // ===============================================
+      // EXEMPLO PRÁTICO: RELÓGIO DIGITAL
+      // ===============================================
+      document.write('<h3>4️⃣ Exemplo: Relógio Digital</h3>');
+      
+      function atualizarRelogio() {
+          let agora = new Date();
+          let horas = addZero(agora.getHours());
+          let minutos = addZero(agora.getMinutes());
+          let segundos = addZero(agora.getSeconds());
+          
+          document.getElementById('relogio').textContent = 
+              `${horas}:${minutos}:${segundos}`;
+      }
+
+      document.write('<div id="relogio" style="font-size: 24px; font-weight: bold;"></div>');
+      // Atualiza o relógio a cada segundo
+      setInterval(atualizarRelogio, 1000);
+      atualizarRelogio(); // Chama imediatamente pela primeira vez
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resuminho</h3>');
+      
+      document.write('<p><strong>Principais métodos para datas:</strong></p>');
+      document.write('👉 new Date() - Cria data atual<br>');
+      document.write('👉 getDate() - Pega o dia<br>');
+      document.write('👉 getMonth() - Pega o mês (0-11)<br>');
+      document.write('👉 getFullYear() - Pega o ano<br>');
+      document.write('👉 getHours() - Pega a hora<br>');
+      document.write('👉 getMinutes() - Pega os minutos<br>');
+      document.write('👉 getSeconds() - Pega os segundos<br>');
+
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('⚠️ Lembre-se que os meses começam do 0<br>');
+      document.write('⚠️ Use addZero() para números menores que 10<br>');
+      document.write('⚠️ Para datas específicas: new Date(ano, mes, dia)<br>');
+
+      document.write('</div>');
     </script>
   </head>
-
   <body>
   </body>
 </html>

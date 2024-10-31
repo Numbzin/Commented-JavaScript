@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manipulação de Classes no DOM</title>
     <style>
         /* Define o estilo da classe estilo1 */
         .estilo1 {
@@ -15,25 +15,30 @@
         .estilo2 {
             width: 400px; /* Largura de 400 pixels */
             height: 50px; /* Altura de 50 pixels */
-            background-color: #ff0000; /* Cor de fundo vermelha */
+            background-color: #00ff00; /* Cor de fundo verde */
             text-align: center; /* Centraliza o texto */
             font-size: 25px; /* Tamanho da fonte 25 pixels */
             color: #ffffff; /* Cor do texto branca */
             padding: 25px; /* Preenchimento interno de 25 pixels */
+            border-radius: 10px; /* Bordas arredondadas */
         }
     </style>
 
     <script>
         // Função que modifica a classe do elemento com id 'mensagem'
         function modificaClasse() {
+            // Obtém o elemento pelo ID 'mensagem'
+            let elemento = document.getElementById('mensagem');
             // Altera a classe do elemento para 'estilo2', que aplica um novo estilo
-            document.getElementById('mensagem').className = 'estilo2';
+            elemento.className = 'estilo2';
         }
     </script>
 </head>
 <body>
+    <!-- Div que será estilizada -->
     <div id="mensagem" class="estilo1">Modificando a classe do elemento</div>
     <hr>
+    <!-- Botão que ao ser clicado chama a função para modificar a classe -->
     <button type="button" onclick="modificaClasse()">Aplicar classe</button>
 </body>
 </html>

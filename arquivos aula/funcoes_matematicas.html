@@ -2,22 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <title>Funções Matemáticas em JavaScript</title>
     <script>
+      document.write('<div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">');
+      document.write('<h2>🎲 Funções Matemáticas em JavaScript</h2>');
+      document.write('<p>Vamos explorar como gerar números aleatórios e trabalhar com intervalos específicos!</p>');
+
+      // ===============================================
+      // GERAÇÃO DE NÚMEROS ALEATÓRIOS
+      // ===============================================
+      document.write('<h3>1️⃣ Geração de Números Aleatórios</h3>');
+
       // Gera um número aleatório entre 0 e 1
-      let x = Math.random();
-      document.write(x);
+      let x = Math.random(); // Usando Math.random() para gerar o número
+      document.write('Número aleatório entre 0 e 1: ' + x + '<br>');
+
+      document.write('<p><em>💡 Dica: Math.random() gera um valor decimal entre 0 (inclusivo) e 1 (exclusivo).</em></p>');
+
+      // ===============================================
+      // GERANDO NÚMERO EM UM INTERVALO ESPECÍFICO
+      // ===============================================
+      document.write('<h3>2️⃣ Gerando Número em um Intervalo Específico</h3>');
 
       // Função para gerar um número aleatório em um intervalo específico
       function gerarNumeroAleatorio(min, max) {
+        // Multiplica Math.random() pelo intervalo (max - min) e adiciona o valor mínimo
         return (Math.random() * (max - min) + min).toFixed(2);
       }
 
-      // Gerar um número aleatório entre 1 e 100
+      // Exemplo prático: Gerar um número aleatório entre 1 e 100
       let numeroAleatorio = gerarNumeroAleatorio(1, 100);
+      document.write('Número aleatório entre 1 e 100: ' + numeroAleatorio + '<br>');
 
-      // Exibir o número aleatório na página
-      document.write("Número Aleatório: " + numeroAleatorio);
+      document.write('<p><em>💡 Função gerarNumeroAleatorio(min, max) permite gerar um número em qualquer intervalo especificado.</em></p>');
+
+      // ===============================================
+      // RESUMO E DICAS
+      // ===============================================
+      document.write('<h3>📝 Resumo das Funções Matemáticas Utilizadas</h3>');
+      
+      document.write('<p><strong>Principais funções:</strong></p>');
+      document.write('👉 <code>Math.random()</code> - Gera um número decimal entre 0 e 1<br>');
+      document.write('👉 <code>toFixed()</code> - Define o número de casas decimais<br>');
+
+      document.write('<br><p><strong>Dicas importantes:</strong></p>');
+      document.write('⚠️ Math.random() sempre gera um valor entre 0 e 1<br>');
+      document.write('⚠️ Multiplique Math.random() para definir um intervalo desejado<br>');
+      document.write('⚠️ Use toFixed() para limitar as casas decimais<br>');
+
+      document.write('</div>');
     </script>
   </head>
   <body></body>
