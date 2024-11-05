@@ -3,7 +3,7 @@
 
 Este repositório contém uma coleção de códigos JavaScript organizados em diferentes pastas, cada uma dedicada a um tópico específico. O objetivo deste repositório é servir como um guia de aprendizado para quem está estudando JavaScript, com comentários explicativos em cada arquivo para facilitar a compreensão dos conceitos.
 
-[Documentação JavaScript no W3Schools](https://www.w3schools.com/js/)
+Para uma documentação completa sobre JavaScript, consulte o [W3Schools JavaScript Documentation](https://www.w3schools.com/js/).
 
 ## Estrutura do Repositório
 
