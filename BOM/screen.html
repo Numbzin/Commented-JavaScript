@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>JavaScript: Manipulação de Tela</title> <!-- Título da página que aparecerá na aba do navegador -->
+  
+  <script>
+    // ===============================================
+    // OBTENDO DIMENSÕES DA TELA
+    // ===============================================
+    let altura = window.screen.availHeight; // Obtém a altura disponível da tela
+    let largura = window.screen.availWidth; // Obtém a largura disponível da tela
+
+    // ===============================================
+    // EXIBINDO DIMENSÕES (OPCIONAL)
+    // ===============================================
+    // document.write('Altura do navegador é: ' + altura + '<br />'); // Exibe a altura da tela
+    // document.write('Largura do navegador é: ' + largura + '<br />'); // Exibe a largura da tela
+
+    // ===============================================
+    // CONDIÇÃO PARA VERSÃO DO MENU
+    // ===============================================
+    // Verifica se a largura da tela é menor que 500 pixels
+    if (largura < 500) {
+      document.write('Lógica para impressão do menu versão mobile'); // Mensagem para a versão mobile
+    } else {
+      document.write('Lógica para impressão do menu versão web'); // Mensagem para a versão web
+    }
+
+    // ===============================================
+    // EXEMPLO ADICIONAL: ORIENTAÇÃO DA TELA
+    // ===============================================
+    // Verifica a orientação da tela
+    if (window.screen.orientation) {
+      document.write('<br>Orientação da tela: ' + window.screen.orientation.type); // Exibe a orientação atual da tela
+    } else {
+      document.write('<br>Orientação não disponível neste navegador.'); // Caso a orientação não seja suportada
+    }
+
+    // ===============================================
+    // EXEMPLO DE FUNÇÃO PARA MENSAGENS DINÂMICAS
+    // ===============================================
+    // Função para exibir uma mensagem com base nas dimensões da tela
+    function exibirMensagem() {
+      if (largura < 500) {
+        return 'Você está usando um dispositivo móvel!';
+      } else {
+        return 'Você está usando um dispositivo de desktop!';
+      }
+    }
+    
+    document.write('<br>' + exibirMensagem()); // Chama a função e exibe a mensagem
+
+    // ===============================================
+    // OUTROS DADOS DA TELA
+    // ===============================================
+    document.write('<h3>🔍 Informações Adicionais da Tela</h3>');
+    document.write('Altura total da tela: ' + window.screen.height + ' pixels<br />'); // Altura total da tela
+    document.write('Largura total da tela: ' + window.screen.width + ' pixels<br />'); // Largura total da tela
+    document.write('Altura disponível: ' + altura + ' pixels<br />'); // Altura disponível para conteúdo
+    document.write('Largura disponível: ' + largura + ' pixels<br />'); // Largura disponível para conteúdo
+
+    // ===============================================
+    // EXEMPLO DE CÁLCULO DE ÁREA DA TELA
+    // ===============================================
+    // Função para calcular a área da tela disponível
+    function calcularAreaDisponivel() {
+      return altura * largura; // Calcula a área multiplicando altura pela largura
+    }
+    
+    let areaDisponivel = calcularAreaDisponivel(); // Chama a função e armazena o resultado
+    document.write('<br>A área disponível da tela é: ' + areaDisponivel + ' pixels quadrados'); // Exibe a área
+
+    // ===============================================
+    // RESUMO E DICAS
+    // ===============================================
+    document.write('<h3>📝 Resumo e Dicas</h3>');
+    document.write('<p><strong>Este exemplo mostra como manipular informações da tela com JavaScript!</strong></p>');
+    document.write('👉 Use <code>window.screen.availHeight</code> e <code>window.screen.availWidth</code> para obter as dimensões disponíveis da tela.<br>');
+    document.write('👉 Utilize <code>window.screen.height</code> e <code>window.screen.width</code> para obter as dimensões totais da tela.<br>');
+    document.write('👉 Funções podem ser úteis para organizar seu código e reutilizar lógica.<br>');
+    document.write('👉 Lembre-se de testar seu código em diferentes dispositivos para garantir responsividade!<br>');
+  </script>
+</head>
+
+<body>
+  <!-- O corpo da página está vazio, mas o script irá gerar conteúdo dinâmico -->
+</body>
+</html>

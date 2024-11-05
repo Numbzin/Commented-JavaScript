@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <title>Tratamento de Erros em JavaScript</title> <!-- Título da página -->
+    <script>
+        // ===============================================
+        // ARRAY DE VÍDEOS
+        // ===============================================
+        let video = Array(); // Cria um array vazio para armazenar vídeos
+
+        // Adiciona um vídeo ao array com nome e categoria
+        video[1] = Array();
+        video[1]["nome"] = "Fullmetal Alchemist"; // Nome do vídeo
+        video[1]["categoria"] = "Anime"; // Categoria do vídeo
+
+        // ===============================================
+        // FUNÇÃO PARA OBTER VÍDEO
+        // ===============================================
+        function getVideo(video) {
+            try {
+                // Tenta acessar um vídeo que pode não existir
+                console.log(video[0]["nome"]); // Acessa o nome do vídeo na posição 0
+            } catch (erro) { // Captura qualquer erro que ocorra no bloco try
+                tratarErro(erro); // Chama a função para tratar o erro
+                console.log("Agora sim podemos tratar esse erro"); // Mensagem após tratar o erro
+
+                // Lança um novo erro com uma mensagem personalizada
+                throw new Error("Houve um erro mas não se preocupe, estamos trabalhando nisso agora!"); // Usa 'throw' para lançar um novo erro
+            } finally {
+                console.log("Sempre passa por aqui (try / catch)"); // Mensagem do bloco finally
+            }
+
+            console.log("A aplicação não morreu"); // Mensagem que indica que a aplicação continua
+        }
+
+        // ===============================================
+        // FUNÇÃO PARA TRATAR ERROS
+        // ===============================================
+        function tratarErro(e) {
+            console.log("Erro capturado: ", e); // Exibe o erro capturado no console
+        }
+
+        // Chama a função getVideo com o array de vídeos
+        getVideo(video);
+    </script>
+</head>
+<body>
+</body>
+</html>

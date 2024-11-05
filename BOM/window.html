@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em dispositivos móveis -->
+    <title>Manipulação de Janelas em JavaScript</title> <!-- Título da página -->
+</head>
+<body>
+    <script>
+        // ===============================================
+        // DECLARAÇÃO DE VARIÁVEL PARA A JANELA
+        // ===============================================
+        let janela; // Variável que armazenará a referência da nova janela pop-up
+
+        // ===============================================
+        // FUNÇÃO PARA ABRIR A POP-UP
+        // ===============================================
+        function AbrirPopUp() {
+            // O método window.open() é utilizado para abrir uma nova janela do navegador.
+            // Aqui, estamos tentando abrir o Google em uma nova janela.
+            janela = window.open('http://www.google.com', 'nova janela'); // Corrigido o 'htpp' para 'http'
+        }
+
+        // ===============================================
+        // FUNÇÃO PARA FECHAR A POP-UP
+        // ===============================================
+        function FecharPopUp() {
+            // O método close() fecha a janela pop-up aberta anteriormente.
+            // Verifica se a janela está aberta antes de tentar fechá-la
+            if (janela) {
+                janela.close(); // Fecha a janela se ela estiver aberta
+                janela = null; // Limpa a referência da janela
+            } else {
+                document.write('Nenhuma janela para fechar!'); // Mensagem se não houver janela aberta
+            }
+        }
+    </script>
+    <!-- ===============================================
+    BOTÕES DE CONTROLE DA JANELA
+    =============================================== -->
+    <button onclick="AbrirPopUp()">Abrir Janela</button> <!-- Botão que chama a função para abrir a nova janela -->
+    <button onclick="FecharPopUp()">Fechar Janela</button> <!-- Botão que chama a função para fechar a nova janela -->
+</body>
+</html>

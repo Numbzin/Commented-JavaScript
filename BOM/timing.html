@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade em dispositivos móveis -->
+    <title>Manipulação de Tempo em JavaScript</title> <!-- Título da página -->
+</head>
+<script>
+    // ===============================================
+    // EXEMPLO DE setTimeout
+    // ===============================================
+    // O setTimeout é utilizado para executar uma função após um determinado tempo (em milissegundos).
+    // Aqui, vamos exibir a mensagem "Teste" após 2000 milissegundos (2 segundos).
+    
+    // setTimeout(function() { 
+    //     document.write('Teste'); 
+    // }, 2000); // 2000 ms = 2 segundos
+
+    // ===============================================
+    // CONTADOR DE 100 A 0 COM setInterval
+    // ===============================================
+    let i = 100; // Inicializa a variável i com 100
+
+    // O setInterval executa uma função repetidamente em um intervalo de tempo especificado (em milissegundos).
+    // Neste caso, a função será executada a cada 1000 milissegundos (1 segundo).
+    let x = setInterval(function () {
+        document.write(i + '<br />'); // Exibe o valor atual de i na tela
+        i--; // Decrementa i em 1 a cada segundo
+
+        // ===============================================
+        // CONDIÇÃO PARA PARAR O CONTADOR
+        // ===============================================
+        // Verifica se i chegou a 0
+        if (i === 0) {
+            clearInterval(x); // Para o intervalo quando i é 0
+            document.write('Contagem finalizada!'); // Mensagem final quando a contagem termina
+        }
+    }, 1000); // Define o intervalo para 1000 milissegundos (1 segundo)
+
+    // ===============================================
+    // EXEMPLO DE CONTADOR REVERSO
+    // ===============================================
+    // Vamos fazer um contador reverso que mostra o tempo restante em segundos
+    let tempoRestante = 10; // Define o tempo restante em segundos
+
+    let contador = setInterval(function () {
+        document.write(`Tempo restante: ${tempoRestante} segundos<br />`); // Exibe o tempo restante
+
+        // Decrementa o tempo restante a cada segundo
+        tempoRestante--; 
+
+        // Verifica se o tempo restante chegou a 0
+        if (tempoRestante < 0) {
+            clearInterval(contador); // Para o contador
+            document.write('O tempo acabou!'); // Mensagem de fim de contagem
+        }
+    }, 1000); // Define o intervalo para 1000 milissegundos (1 segundo)
+
+</script>
+<body>
+    <!-- O corpo da página está vazio, mas o script irá gerar conteúdo dinâmico -->
+</body>
+</html>

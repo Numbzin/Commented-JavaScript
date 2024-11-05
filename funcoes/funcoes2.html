@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade em dispositivos móveis -->
+    <title>Funções em JavaScript</title> <!-- Título da página -->
+    <script>
+        // ===============================================
+        // FUNÇÃO PARA SOMAR TODOS OS ARGUMENTOS
+        // ===============================================
+        function soma(...args) { // Usando operador rest para capturar todos os argumentos em um array
+            let resultado = 0; // Inicializa a variável resultado como 0
+            
+            // ===============================================
+            // ITERAÇÃO SOBRE OS ARGUMENTOS
+            // ===============================================
+            // O método forEach() é utilizado para iterar sobre cada elemento do array 'args'
+            args.forEach(function(arg) {
+                resultado += arg; // Soma cada argumento ao resultado
+            });
+            
+            return resultado; // Retorna o resultado da soma
+        }
+
+        // ===============================================
+        // CHAMADA DA FUNÇÃO E EXIBIÇÃO DO RESULTADO
+        // ===============================================
+        console.log(soma(7, 5, 3.2)); // Chama a função soma com 3 argumentos e exibe 15.2 no console
+
+        // ===============================================
+        // EXEMPLOS ADICIONAIS DE USO
+        // ===============================================
+        console.log(soma(10, 20)); // Chama a função soma com 2 argumentos e exibe 30
+        console.log(soma(1, 2, 3, 4, 5)); // Chama a função soma com 5 argumentos e exibe 15
+        console.log(soma(-1, 0, 1)); // Chama a função soma com números negativos e exibe 0
+
+        // ===============================================
+        // FUNÇÃO PARA CALCULAR A MÉDIA
+        // ===============================================
+        function media(...args) {
+            let somaTotal = soma(...args); // Chama a função soma para obter a soma total
+            return somaTotal / args.length; // Calcula e retorna a média
+        }
+
+        // ===============================================
+        // CHAMADAS DA FUNÇÃO MÉDIA
+        // ===============================================
+        console.log(media(10, 20, 30)); // Chama a função média com 3 argumentos e exibe 20
+        console.log(media(1, 2, 3, 4, 5)); // Chama a função média com 5 argumentos e exibe 3
+    </script>
+</head>
+<body>
+</body>
+</html>

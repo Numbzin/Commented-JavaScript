@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do Objeto Location</title>
+</head>
+<body>
+    <div style="font-family: Arial; max-width: 800px; margin: 20px; line-height: 1.5;">
+        <h2>🌐 Manipulação do Objeto Location em JavaScript</h2>
+        <p>Vamos explorar como manipular a localização da página (URL) usando o objeto <code>window.location</code>.</p>
+
+        <!-- Botão que redireciona o usuário para o Google -->
+        <button onclick="window.location.href='https://www.google.com'">Ir para o Google</button>
+        
+        <!-- Botão que redireciona o usuário para o W3Schools -->
+        <button onclick="window.location.href='https://www.w3schools.com'">Ir para o W3Schools</button>
+        
+        <!-- Botão para recarregar a página atual -->
+        <button onclick="window.location.reload()">Recarregar Página</button>
+        
+        <!-- Botão para exibir a URL atual em um alerta -->
+        <button onclick="mostrarUrlAtual()">Mostrar URL Atual</button>
+        
+        <!-- Botão para navegar para a página anterior no histórico -->
+        <button onclick="window.history.back()">Voltar Página</button>
+        
+        <!-- Botão para ir para a próxima página no histórico, se disponível -->
+        <button onclick="window.history.forward()">Avançar Página</button>
+
+        <!-- Botão para mudar apenas a hash na URL (apenas parte após '#') -->
+        <button onclick="adicionarHash()">Adicionar Hash à URL</button>
+
+        <!-- Função JavaScript para manipular e exibir informações do objeto location -->
+        <script>
+            // Função para mostrar a URL atual em um alerta
+            function mostrarUrlAtual() {
+                alert("URL atual: " + window.location.href); // Mostra o endereço completo da página
+            }
+
+            // Função para adicionar uma hash à URL
+            function adicionarHash() {
+                window.location.hash = "nova-secao"; // Altera a parte da URL após o símbolo #
+                alert("Hash adicionada à URL: " + window.location.href); // Mostra a nova URL
+            }
+
+            // Exemplo: Redirecionar para outra página com um tempo de espera
+            setTimeout(function() {
+                // Após 5 segundos, redireciona para uma nova página
+                window.location.href = "https://www.example.com";
+            }, 5000);
+
+            // Explicação no console
+            console.log("💡 Dica: Veja como usamos window.location para manipular a URL da página.");
+        </script>
+
+        <h3>🔎 Explicação dos Recursos</h3>
+        <p><strong>window.location.href</strong>: A propriedade <code>href</code> permite ler ou alterar a URL completa da página.</p>
+        <p><strong>window.location.reload()</strong>: Recarrega a página atual.</p>
+        <p><strong>window.history.back()</strong>: Volta para a página anterior.</p>
+        <p><strong>window.history.forward()</strong>: Avança para a próxima página, se disponível.</p>
+        <p><strong>window.location.hash</strong>: Define ou obtém a parte da URL após o símbolo <code>#</code>, usado para navegação dentro da mesma página.</p>
+        
+        <h3>📝 Resumo e Dicas</h3>
+        <ul>
+            <li>Utilize <code>window.location.href</code> para redirecionar o usuário a uma nova página.</li>
+            <li>Use <code>window.location.reload()</code> para atualizar a página, útil para recarregar conteúdo.</li>
+            <li><code>window.history.back()</code> e <code>window.history.forward()</code> são usados para navegação no histórico do navegador.</li>
+            <li><code>window.location.hash</code> é útil para navegar dentro da mesma página, como em seções específicas.</li>
+        </ul>
+    </div>
+</body>
+</html>
