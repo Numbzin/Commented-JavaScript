@@ -1,6 +1,9 @@
+
 # Repositório de JavaScript Comentado
 
 Este repositório contém uma coleção de códigos JavaScript organizados em diferentes pastas, cada uma dedicada a um tópico específico. O objetivo deste repositório é servir como um guia de aprendizado para quem está estudando JavaScript, com comentários explicativos em cada arquivo para facilitar a compreensão dos conceitos.
+
+[Documentação JavaScript no W3Schools](https://www.w3schools.com/js/)
 
 ## Estrutura do Repositório
 
@@ -8,6 +11,7 @@ O repositório é organizado nas seguintes pastas:
 
 - **arquivos aula**: Contém códigos de aulas, onde conceitos básicos de JavaScript são introduzidos.
 - **array**: Exemplos e exercícios relacionados a arrays em JavaScript, incluindo manipulações e métodos.
+- **BOM**: Códigos relacionados ao Browser Object Model, que permitem interações com o navegador, como manipulação da janela e histórico.
 - **desafios**: Desafios de programação que ajudam a solidificar o entendimento dos conceitos aprendidos.
 - **DOM**: Exemplos de manipulação do DOM (Document Object Model), mostrando como interagir com elementos HTML usando JavaScript.
 - **eventos**: Códigos que demonstram como lidar com eventos em JavaScript, como cliques de botão e entradas de teclado.
