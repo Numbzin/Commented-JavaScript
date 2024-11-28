@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstração em Programação Orientada a Objetos</title>
+  </head>
+
+  <body>
+    <h1>Exemplo de Abstração com POO</h1>
+    <div id="output"></div>
+
+    <script>
+      // Modelo da entidade ContaBancaria utilizando o pilar da abstração
+      class ContaBancaria {
+        /**
+         * Construtor da classe.
+         * Inicializa as propriedades de uma conta bancária.
+         */
+        constructor() {
+          this.agencia = 1075; // Número da agência
+          this.numeroConta = 8351125; // Número da conta
+          this.saldo = 50; // Saldo inicial da conta
+          this.limite = 450; // Limite de crédito
+        }
+
+        /**
+         * Método para realizar um depósito.
+         * @param {number} valor - Valor a ser depositado.
+         */
+        depositar(valor) {
+          this.saldo += valor;
+        }
+
+        /**
+         * Método para realizar um saque.
+         * @param {number} valorSaque - Valor a ser sacado.
+         */
+        sacar(valorSaque) {
+          this.saldo -= valorSaque;
+        }
+
+        /**
+         * Método para consultar o saldo atual da conta.
+         * @returns {number} - Saldo disponível.
+         */
+        consultarSaldo() {
+          return this.saldo;
+        }
+      }
+
+      // Instanciando dois objetos da classe ContaBancaria
+      let contaX = new ContaBancaria(); // Conta X
+      let contaY = new ContaBancaria(); // Conta Y
+
+      // Demonstração de operações na conta X
+      console.log("Saldo inicial conta X:", contaX.consultarSaldo());
+      contaX.depositar(450); // Depósito de 450
+      console.log("Saldo após depósito conta X:", contaX.consultarSaldo());
+      contaX.sacar(200); // Saque de 200
+      console.log("Saldo após saque conta X:", contaX.consultarSaldo());
+
+      // Consultando saldo da conta Y (não sofreu alterações)
+      console.log("Saldo inicial conta Y:", contaY.consultarSaldo());
+    </script>
+  </body>
+</html>

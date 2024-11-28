@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classe TV - Exemplo de Encapsulamento</title>
+    <script>
+      /**
+       * Classe que representa uma TV.
+       * Ela contém canais disponíveis, canal ativo e volume.
+       */
+      class Tv {
+        /**
+         * Construtor da classe TV.
+         * Este método é chamado automaticamente ao criar uma nova instância da TV.
+         */
+        constructor() {
+          // Lista de canais disponíveis para a TV (números dos canais).
+          this._relacaoCanais = [2, 4, 5, 7, 10];
+
+          // Canal que está atualmente ativo na TV (inicialmente, canal 5).
+          this._canalAtivo = 5;
+
+          // Volume atual da TV (inicialmente 5).
+          this._volume = 5;
+        }
+
+        /**
+         * Getter para acessar o canal ativo.
+         * @returns {number} O canal atualmente ativo.
+         */
+        get canalAtivo() {
+          return this._canalAtivo;
+        }
+
+        /**
+         * Setter para alterar o canal ativo.
+         * Este método verifica se o canal está na lista de canais disponíveis antes de mudar.
+         * @param {number} canal - Número do canal que deseja ativar.
+         */
+        set canalAtivo(canal) {
+          // Verifica se o canal existe na lista de canais disponíveis.
+          if (this._relacaoCanais.indexOf(canal) !== -1) {
+            this._canalAtivo = canal; // Atualiza o canal ativo.
+          } else {
+            console.warn(`O canal ${canal} não está disponível.`); // Exibe um aviso caso o canal não exista.
+          }
+        }
+      }
+
+      // Criando uma nova instância da TV.
+      let tv = new Tv();
+
+      // Tentando mudar o canal ativo para o canal 7 (disponível na lista).
+      tv.canalAtivo = 7;
+
+      // Exibindo o canal ativo no console (deve ser 7).
+      console.log(`Canal ativo: ${tv.canalAtivo}`);
+
+      // Tentando mudar o canal ativo para o canal 3 (não disponível na lista).
+      tv.canalAtivo = 3; // Isso não muda o canal ativo e exibe um aviso.
+
+      // Exibindo o canal ativo no console novamente (deve continuar sendo 7).
+      console.log(`Canal ativo: ${tv.canalAtivo}`);
+    </script>
+  </head>
+  <body>
+    <h1>Exemplo de Classe TV</h1>
+    <p>Abra o console do navegador para ver os resultados.</p>
+    <div id="output"></div>
+  </body>
+</html>

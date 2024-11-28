@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objeto Carro</title>
+
+    <script>
+      /**
+       * Função construtora para criar objetos do tipo Carro.
+       */
+      let Carro = function () {
+        // Propriedades do carro
+        this.cor = "Amarelo"; // Cor do carro
+        this.modelo = "Chevette"; // Modelo do carro
+        this.velocidadeAtual = 0; // Velocidade inicial
+        this.velocidadeMaxima = 180; // Velocidade máxima permitida
+
+        /**
+         * Método para aumentar a velocidade do carro.
+         * A velocidade aumenta em 10 unidades a cada chamada.
+         */
+        this.acelerar = function () {
+          // Calcula a nova velocidade somando 10 à velocidade atual
+          let velocidade = this.getVelocidadeAtual() + 10;
+
+          // Atualiza a velocidade atual usando o método setVelocidadeAtual
+          this.setVelocidadeAtual(velocidade);
+        };
+
+        /**
+         * Método para obter a velocidade atual do carro.
+         * @returns {number} - A velocidade atual.
+         */
+        this.getVelocidadeAtual = function () {
+          return this.velocidadeAtual;
+        };
+
+        /**
+         * Método para definir a velocidade atual do carro.
+         * @param {number} velocidadeAtual - A nova velocidade do carro.
+         */
+        this.setVelocidadeAtual = function (velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual;
+        };
+      };
+
+      // Criando um novo objeto do tipo Carro
+      let carro = new Carro();
+
+      // Exibindo a velocidade inicial do carro
+      console.log(`A velocidade atual é ${carro.getVelocidadeAtual()} km/h`);
+
+      // Acelerando o carro
+      carro.acelerar();
+
+      // Exibindo a velocidade após acelerar
+      console.log(`A velocidade atual é ${carro.getVelocidadeAtual()} km/h`);
+    </script>
+  </head>
+
+  <body>
+    <!-- Apenas saída no console -->
+    <div id="output"></div>
+  </body>
+</html>

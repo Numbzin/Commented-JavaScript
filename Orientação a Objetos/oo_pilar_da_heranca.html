@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Herança com Classes</title>
+    <script>
+      /**
+       * Classe base: Animal
+       * Representa um animal genérico com propriedades básicas como cor, tamanho e peso.
+       */
+      class Animal {
+        constructor() {
+          // Cor do animal (por exemplo, "marrom").
+          this.cor = "";
+
+          // Tamanho do animal em alguma unidade (por exemplo, "50 cm").
+          this.tamanho = null;
+
+          // Peso do animal (por exemplo, "10 kg").
+          this.peso = null;
+        }
+
+        /**
+         * Método comum a todos os animais: Dormir.
+         * Exibe uma mensagem no console indicando que o animal está dormindo.
+         */
+        dormir() {
+          console.log("Dormir");
+        }
+      }
+
+      /**
+       * Classe Cachorro: Herda de Animal.
+       * Adiciona características específicas de um cachorro.
+       */
+      class Cachorro extends Animal {
+        constructor() {
+          super(); // Chama o construtor da classe base (Animal).
+
+          // Adiciona uma característica específica de cachorro: orelhas grandes e caídas.
+          this.orelhas = "Grandes e caídas";
+        }
+
+        /**
+         * Método específico para cachorros: Correr.
+         * Exibe uma mensagem no console indicando que o cachorro está correndo.
+         */
+        correr() {
+          console.log("Correr");
+        }
+
+        /**
+         * Método específico para cachorros: Rosnar.
+         * Exibe uma mensagem no console indicando que o cachorro está rosnando.
+         */
+        rosnar() {
+          console.log("Rosnar");
+        }
+      }
+
+      /**
+       * Classe Pássaro: Herda de Animal.
+       * Adiciona características específicas de um pássaro.
+       */
+      class Passaro extends Animal {
+        constructor() {
+          super(); // Chama o construtor da classe base (Animal).
+
+          // Adiciona uma característica específica de pássaro: bico curto.
+          this.bico = "Curto";
+        }
+
+        /**
+         * Método específico para pássaros: Voar.
+         * Exibe uma mensagem no console indicando que o pássaro está voando.
+         */
+        voar() {
+          console.log("Voar");
+        }
+      }
+
+      /**
+       * Classe Papagaio: Herda de Passaro.
+       * Adiciona características específicas de um papagaio.
+       */
+      class Papagaio extends Passaro {
+        constructor() {
+          super(); // Chama o construtor da classe base (Passaro).
+
+          // Adiciona uma característica específica de papagaio: capacidade de falar.
+          this.sabeFalar = true;
+        }
+
+        /**
+         * Método específico para papagaios: Falar.
+         * Exibe uma mensagem no console indicando que o papagaio está falando.
+         */
+        falar() {
+          console.log("Falar");
+        }
+      }
+
+      // Criando instâncias das classes:
+      let cachorro = new Cachorro(); // Um cachorro.
+      let passaro = new Passaro(); // Um pássaro genérico.
+      let papagaio = new Papagaio(); // Um papagaio.
+
+      // Exemplos de métodos que podem ser chamados:
+      /*
+      cachorro.dormir();  // Método herdado da classe Animal.
+      passaro.dormir();   // Método herdado da classe Animal.
+      papagaio.falar();   // Método específico da classe Papagaio.
+      papagaio.dormir();  // Método herdado da classe Animal.
+      papagaio.voar();    // Método herdado da classe Passaro.
+      */
+
+      // Exibindo as instâncias no console para visualizar suas propriedades.
+      console.log(cachorro);
+      console.log(passaro);
+      console.log(papagaio);
+    </script>
+  </head>
+  <body>
+    <h1>Exemplo de Herança com Classes</h1>
+    <p>Abra o console do navegador para ver os resultados.</p>
+    <div id="output"></div>
+  </body>
+</html>

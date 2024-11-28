@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objeto Assinatura</title>
+
+    <script>
+      // Definição de um objeto literal chamado "assinatura"
+      let assinatura = {
+        idCliente: 1000, // Propriedade que representa o ID do cliente
+        descricao: "Acesso a internet", // Descrição inicial do serviço
+        status() {
+          // Método que exibe o status do serviço no console
+          console.log("Ativo");
+        },
+      };
+
+      // Exibindo a propriedade "descricao" do objeto "assinatura"
+      console.log(assinatura.descricao); // Saída: Acesso a internet
+
+      // Criando uma nova referência ao mesmo objeto
+      let y = assinatura;
+
+      // Exibindo a propriedade "descricao" do objeto referenciado por "y"
+      console.log(y.descricao); // Saída: Acesso a internet
+
+      // Atualizando a propriedade "descricao" através da referência "y"
+      y.descricao = "Internet + tv + telefone";
+
+      // Exibindo a propriedade "descricao" através das duas referências
+      console.log(assinatura.descricao); // Saída: Internet + tv + telefone
+      console.log(y.descricao); // Saída: Internet + tv + telefone
+    </script>
+  </head>
+  <body></body>
+</html>

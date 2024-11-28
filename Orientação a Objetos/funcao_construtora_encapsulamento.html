@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carro - Funções Construtoras</title>
+    <script>
+      /**
+       * Função construtora para criar objetos do tipo Carro.
+       */
+      let Carro = function () {
+        this.cor = "Amarelo"; // Cor do carro.
+        this.modelo = "Chevette"; // Modelo do carro.
+        this.velocidadeAtual = 0; // Velocidade inicial do carro.
+        this.velocidadeMaxima = 180; // Velocidade máxima do carro.
+
+        /**
+         * Método para acelerar o carro.
+         * Aumenta a velocidade em 50 unidades, mas respeita o limite de velocidade máxima.
+         */
+        this.acelerar = function () {
+          let velocidade = this.getVelocidadeAtual() + 50;
+
+          // Se a velocidade calculada ultrapassar o limite, define como a máxima.
+          if (velocidade > this.velocidadeMaxima) {
+            velocidade = this.velocidadeMaxima;
+          }
+
+          this.setVelocidadeAtual(velocidade); // Atualiza a velocidade atual.
+        };
+
+        /**
+         * Método para obter a velocidade atual do carro.
+         * @returns {number} - A velocidade atual.
+         */
+        this.getVelocidadeAtual = function () {
+          return this.velocidadeAtual;
+        };
+
+        /**
+         * Método para definir a velocidade atual do carro.
+         * @param {number} velocidadeAtual - A nova velocidade.
+         */
+        this.setVelocidadeAtual = function (velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual;
+        };
+      };
+
+      // Instância de Carro
+      let carro = new Carro();
+      console.log(carro.velocidadeAtual); // Exibe a velocidade inicial (0).
+      carro.acelerar();
+      console.log(carro.velocidadeAtual); // Exibe a velocidade após a primeira aceleração.
+      carro.acelerar();
+      console.log(carro.velocidadeAtual);
+      carro.acelerar();
+      console.log(carro.velocidadeAtual);
+      carro.acelerar();
+      console.log(carro.velocidadeAtual);
+
+      // Alterando a velocidade máxima diretamente
+      carro.velocidadeMaxima = 280;
+      carro.acelerar();
+      console.log(carro.velocidadeAtual);
+
+      /**
+       * Função construtora para criar objetos do tipo Carro2.
+       * Utiliza variáveis privadas para maior encapsulamento.
+       */
+      let Carro2 = function () {
+        var velocidadeMaxima = 180; // Variável privada: Velocidade máxima.
+        var quilometrosRodados = 0; // Variável privada: Quilômetros rodados.
+
+        this.cor = "Amarelo"; // Cor do carro.
+        this.modelo = "Chevette"; // Modelo do carro.
+        this.velocidadeAtual = 0; // Velocidade inicial.
+
+        /**
+         * Método para acelerar o carro.
+         * Aumenta a velocidade em 50 unidades, respeitando o limite de velocidade máxima.
+         * Incrementa os quilômetros rodados.
+         */
+        this.acelerar = function () {
+          let velocidade = this.getVelocidadeAtual() + 50;
+
+          // Respeita o limite de velocidade máxima.
+          if (velocidade > velocidadeMaxima) {
+            velocidade = velocidadeMaxima;
+          }
+
+          this.setVelocidadeAtual(velocidade); // Atualiza a velocidade atual.
+
+          // Incrementa os quilômetros rodados.
+          setQuilometrosRodados(0.07);
+          console.log(quilometrosRodados.toFixed(2)); // Exibe os quilômetros rodados no console.
+        };
+
+        /**
+         * Método para obter a velocidade atual do carro.
+         * @returns {number} - A velocidade atual.
+         */
+        this.getVelocidadeAtual = function () {
+          return this.velocidadeAtual;
+        };
+
+        /**
+         * Método para definir a velocidade atual do carro.
+         * @param {number} velocidadeAtual - A nova velocidade.
+         */
+        this.setVelocidadeAtual = function (velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual;
+        };
+
+        /**
+         * Função privada para atualizar os quilômetros rodados.
+         * @param {number} q - Quilômetros a serem adicionados.
+         */
+        var setQuilometrosRodados = function (q) {
+          quilometrosRodados += q;
+        };
+      };
+
+      // Instância de Carro2
+      let carro2 = new Carro2();
+      console.log(carro2.velocidadeAtual); // Exibe a velocidade inicial (0).
+      carro2.acelerar();
+      console.log(carro2.velocidadeAtual);
+      carro2.acelerar();
+      console.log(carro2.velocidadeAtual);
+      carro2.acelerar();
+      console.log(carro2.velocidadeAtual);
+      carro2.acelerar();
+      console.log(carro2.velocidadeAtual);
+      carro2.acelerar();
+      console.log(carro2.velocidadeAtual);
+
+      // Não é possível alterar `velocidadeMaxima` diretamente, pois é privada.
+      // carro2.velocidadeMaxima = 280; // Isso seria ignorado.
+
+      console.log(carro);
+      console.log(carro2);
+    </script>
+  </head>
+
+  <body></body>
+</html>

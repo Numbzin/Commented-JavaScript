@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de Produto</title>
+
+    <script>
+      /**
+       * Classe que representa um Produto.
+       */
+      class Produto {
+        /**
+         * Construtor da classe Produto.
+         * @param {string} descricao - A descrição do produto.
+         * @param {number} preco - O preço do produto.
+         */
+        constructor(descricao, preco) {
+          this.descricao = descricao; // Define a descrição do produto.
+          this.preco = preco; // Define o preço do produto.
+        }
+
+        /**
+         * Método para exibir a descrição do produto no console.
+         */
+        verDescricao() {
+          console.log(`${this.descricao} por apenas ${this.preco}`);
+          // Exibe a descrição e o preço no console.
+        }
+      }
+
+      // Criando uma instância de Produto.
+      let produto = new Produto("Notebook", 2200);
+      produto.verDescricao(); // Chama o método para exibir a descrição do produto.
+
+      /**
+       * Objeto literal que também representa um Produto.
+       */
+      let produtoLiteral = {
+        descricao: "Geladeira", // Propriedade descrição do produto.
+        preco: 1800, // Propriedade preço do produto.
+        verDescricao: function () {
+          // Método para exibir a descrição do produto.
+          console.log(`${this.descricao} por apenas ${this.preco}`);
+        },
+      };
+
+      // Exibindo a descrição do produto literal.
+      produtoLiteral.verDescricao();
+
+      // ----------------------------------------
+      // Comentário explicativo sobre o processo de envio de dados:
+      /*
+        Processo típico de um formulário enviado para o servidor:
+        1. O formulário coleta os dados do usuário.
+        2. Os dados são usados para montar um objeto literal no JavaScript.
+        3. Esse objeto é convertido para JSON.
+        4. O JSON é enviado ao servidor via HTTP (geralmente com POST ou PUT).
+        5. O servidor processa e armazena os dados recebidos.
+      */
+    </script>
+  </head>
+
+  <body>
+    <div id="output"></div>
+  </body>
+</html>

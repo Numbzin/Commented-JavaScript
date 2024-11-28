@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objeto Pessoa | Inclusão atributos</title>
+
+    <script>
+      // Criação do objeto "pessoa" usando notação literal
+      let pessoa = {
+        nome: "Maria", // Propriedade inicial "nome"
+        idade: 25, // Propriedade inicial "idade"
+      };
+
+      // Exibe o objeto inicial no console
+      console.log(pessoa); // Saída: { nome: 'Maria', idade: 25 }
+
+      //---------------------
+      // Adicionando uma nova propriedade ao objeto "pessoa"
+      pessoa.sexo = "Feminino"; // Nova propriedade "sexo" com valor 'Feminino'
+
+      // Exibe o objeto atualizado no console
+      console.log(pessoa);
+      // Saída: { nome: 'Maria', idade: 25, sexo: 'Feminino' }
+
+      // Adicionando um método ao objeto "pessoa"
+      pessoa.dizerOi = () => console.log("Olá, tudo bem?");
+      // O método "dizerOi" é uma função que exibe uma saudação no console
+
+      // Chamando o método "dizerOi"
+      pessoa.dizerOi(); // Saída: Olá, tudo bem?
+    </script>
+  </head>
+  <body>
+    <!-- Corpo vazio, já que todo o exemplo está no console -->
+  </body>
+</html>

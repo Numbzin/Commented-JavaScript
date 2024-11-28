@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Herança de Classes em JavaScript</title>
+
+    <script>
+      /**
+       * Classe base que representa um animal genérico.
+       */
+      class Animal {
+        /**
+         * Construtor da classe Animal.
+         * @param {string} cor - Cor do animal.
+         * @param {number} tamanho - Tamanho do animal em centímetros.
+         * @param {number} peso - Peso do animal em gramas.
+         */
+        constructor(cor, tamanho, peso) {
+          this.cor = cor; // Armazena a cor do animal.
+          this.tamanho = tamanho; // Armazena o tamanho em centímetros.
+          this.peso = peso; // Armazena o peso em gramas.
+        }
+
+        /**
+         * Método que representa o comportamento genérico de dormir.
+         */
+        dormir() {
+          console.log("Dormir"); // Simula o animal dormindo.
+        }
+      }
+
+      /**
+       * Classe que representa um pássaro e herda de Animal.
+       */
+      class Passaro extends Animal {
+        /**
+         * Construtor da classe Passaro.
+         * @param {string} bico - Tipo do bico (ex: "curto", "grande").
+         * @param {string} cor - Cor do pássaro.
+         * @param {number} tamanho - Tamanho do pássaro em centímetros.
+         * @param {number} peso - Peso do pássaro em gramas.
+         */
+        constructor(bico, cor, tamanho, peso) {
+          super(cor, tamanho, peso); // Reutiliza as propriedades da classe Animal.
+          this.bico = bico; // Específico para a classe Passaro.
+        }
+
+        /**
+         * Método que simula o pássaro voando.
+         */
+        voar() {
+          console.log("Voar"); // Simula o voo.
+        }
+      }
+
+      /**
+       * Classe que representa um papagaio, herda de Passaro.
+       */
+      class Papagaio extends Passaro {
+        /**
+         * Construtor da classe Papagaio.
+         * @param {boolean} sabeFalar - Indica se o papagaio sabe falar.
+         * @param {string} cor - Cor do papagaio.
+         * @param {number} tamanho - Tamanho do papagaio em centímetros.
+         * @param {number} peso - Peso do papagaio em gramas.
+         */
+        constructor(sabeFalar, cor, tamanho, peso) {
+          super("Médio", cor, tamanho, peso); // Define o bico como "Médio".
+          this.sabeFalar = sabeFalar; // Específico para a classe Papagaio.
+        }
+
+        /**
+         * Método que simula o papagaio falando.
+         */
+        falar() {
+          console.log("Falar"); // Simula o papagaio falando.
+        }
+      }
+
+      /**
+       * Classe que representa um avestruz, herda de Passaro.
+       */
+      class Avestruz extends Passaro {
+        /**
+         * Construtor da classe Avestruz.
+         * Define automaticamente as características específicas de um avestruz.
+         */
+        constructor() {
+          super("Grande", "Branco e preto", 250, 15000); // Define características fixas.
+        }
+
+        /**
+         * Método que simula o avestruz enterrando a cabeça.
+         */
+        enterrarCabeca() {
+          console.log("Enterrar a cabeça"); // Simula o comportamento único do avestruz.
+        }
+
+        /**
+         * Método sobrescrito da classe Passaro.
+         * Define que o avestruz não sabe voar.
+         */
+        voar() {
+          console.log("Não sabe voar"); // Indica que avestruzes não voam.
+        }
+      }
+
+      // Cria uma instância de Papagaio.
+      let papagaio = new Papagaio(true, "Verde", 25, 350);
+      console.log(papagaio); // Exibe as propriedades do papagaio no console.
+      papagaio.voar(); // O papagaio sabe voar.
+
+      // Cria uma instância de Avestruz.
+      let avestruz = new Avestruz();
+      avestruz.enterrarCabeca(); // O avestruz enterra a cabeça.
+      avestruz.voar(); // O avestruz não sabe voar.
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Paradigmas: Procedural vs OO</title>
+  </head>
+
+  <body>
+    <h1>Exemplo de Software de Marcenaria</h1>
+    <h2>Comparação entre Paradigma Procedural e Orientado a Objetos</h2>
+    <div id="output"></div>
+
+    <script>
+      // PARADIGMA PROCEDURAL
+      console.log("== Paradigma Procedural ==");
+
+      // Criando um array de cadeiras
+      let cadeirasProcedural = [];
+
+      // Adicionando cadeiras ao array
+      cadeirasProcedural.push({
+        qtde_pernas: 4,
+        giratoria: false,
+        cor: "azul",
+      });
+      cadeirasProcedural.push({
+        qtde_pernas: 1,
+        giratoria: true,
+        cor: "vermelha",
+      });
+
+      // Função para girar a cadeira
+      function girarCadeiraProcedural(indice) {
+        if (cadeirasProcedural[indice].giratoria) {
+          console.log(`A cadeira ${indice + 1} girou.`);
+        } else {
+          console.log(`A cadeira ${indice + 1} não é giratória.`);
+        }
+      }
+
+      // Testando o giro das cadeiras
+      girarCadeiraProcedural(0); // Não é giratória
+      girarCadeiraProcedural(1); // É giratória
+
+      // PARADIGMA ORIENTADO A OBJETOS
+      console.log("\n== Paradigma Orientado a Objetos ==");
+
+      // Classe que representa uma cadeira
+      class Cadeira {
+        /**
+         * Construtor da classe Cadeira.
+         * @param {number} qtde_pernas - Quantidade de pernas da cadeira.
+         * @param {boolean} giratoria - Indica se a cadeira é giratória.
+         * @param {string} cor - Cor da cadeira.
+         */
+        constructor(qtde_pernas, giratoria, cor) {
+          this.qtde_pernas = qtde_pernas;
+          this.giratoria = giratoria;
+          this.cor = cor;
+        }
+
+        /**
+         * Método para verificar se a cadeira gira.
+         */
+        girarCadeira() {
+          if (this.giratoria) {
+            console.log(`A cadeira de cor ${this.cor} girou.`);
+          } else {
+            console.log(`A cadeira de cor ${this.cor} não é giratória.`);
+          }
+        }
+      }
+
+      // Criando objetos do tipo Cadeira
+      let cadeirasOO = [];
+      cadeirasOO.push(new Cadeira(4, false, "azul"));
+      cadeirasOO.push(new Cadeira(1, true, "vermelha"));
+
+      // Testando o giro das cadeiras
+      cadeirasOO[0].girarCadeira(); // Não é giratória
+      cadeirasOO[1].girarCadeira(); // É giratória
+
+      // Adicionando uma nova cadeira no paradigma OO
+      cadeirasOO.push(new Cadeira(3, false, "verde"));
+      cadeirasOO[2].girarCadeira(); // Não é giratória
+    </script>
+  </body>
+</html>

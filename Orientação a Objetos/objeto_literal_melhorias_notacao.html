@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objetos Literais</title>
+    <script>
+      // Dados básicos que poderiam vir de um formulário, mas aqui estão definidos manualmente
+      let nome = "Jorge"; // Nome da pessoa
+      let idade = 29; // Idade da pessoa
+      let sexo = "Masculino"; // Sexo da pessoa
+      let profissao = "Programador"; // Profissão da pessoa
+
+      // Definindo um objeto literal utilizando a sintaxe completa
+      let objeto = {
+        nome: nome, // Atribuindo a variável 'nome' à propriedade 'nome' do objeto
+        idade: idade, // Atribuindo a variável 'idade' à propriedade 'idade'
+        sexo: sexo, // Atribuindo a variável 'sexo' à propriedade 'sexo'
+        profissao: profissao, // Atribuindo a variável 'profissao' à propriedade 'profissao'
+        exibirResumo: function () {
+          // Método para exibir um resumo dos dados
+          console.log(
+            `${this.nome}, ${this.idade} anos, ${this.sexo}, é ${this.profissao}`
+          );
+        },
+      };
+
+      // Definindo um segundo objeto literal utilizando a sintaxe abreviada
+      let objeto2 = {
+        nome, // Como o nome da propriedade e da variável são iguais, não é necessário repetir
+        idade, // Sintaxe simplificada
+        sexo,
+        profissao,
+        exibirResumo() {
+          // Também podemos simplificar a declaração de funções dentro do objeto
+          console.log(
+            `${this.nome}, ${this.idade} anos, ${this.sexo}, é ${this.profissao}`
+          );
+        },
+      };
+
+      // Exibindo os dois objetos no console
+      console.log(objeto);
+      objeto.exibirResumo(); // Chamando o método do primeiro objeto
+
+      console.log(objeto2);
+      objeto2.exibirResumo(); // Chamando o método do segundo objeto
+    </script>
+  </head>
+
+  <body>
+    <div id="output"></div>
+  </body>
+</html>

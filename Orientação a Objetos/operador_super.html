@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Herança com Parâmetros</title>
+    <script>
+      /**
+       * Classe base: Animal
+       * Representa um animal genérico com propriedades básicas.
+       */
+      class Animal {
+        /**
+         * Construtor da classe Animal.
+         * @param {string} cor - Cor do animal (por exemplo, "verde").
+         * @param {number} tamanho - Tamanho do animal em cm.
+         * @param {number} peso - Peso do animal em gramas.
+         */
+        constructor(cor, tamanho, peso) {
+          this.cor = cor; // Cor do animal.
+          this.tamanho = tamanho; // Tamanho do animal em centímetros.
+          this.peso = peso; // Peso do animal em gramas.
+        }
+
+        /**
+         * Método comum a todos os animais: Dormir.
+         * Exibe uma mensagem no console indicando que o animal está dormindo.
+         */
+        dormir() {
+          console.log("Dormir");
+        }
+      }
+
+      /**
+       * Classe Passaro: Herda de Animal.
+       * Adiciona características específicas de pássaros.
+       */
+      class Passaro extends Animal {
+        /**
+         * Construtor da classe Passaro.
+         * @param {string} bico - Tipo de bico do pássaro (por exemplo, "curto").
+         * @param {string} cor - Cor do pássaro.
+         * @param {number} tamanho - Tamanho do pássaro em cm.
+         * @param {number} peso - Peso do pássaro em gramas.
+         */
+        constructor(bico, cor, tamanho, peso) {
+          super(cor, tamanho, peso); // Chama o construtor da classe Animal.
+          this.bico = bico; // Tipo de bico do pássaro.
+        }
+
+        /**
+         * Método específico para pássaros: Voar.
+         * Exibe uma mensagem no console indicando que o pássaro está voando.
+         */
+        voar() {
+          console.log("Voar");
+        }
+      }
+
+      /**
+       * Classe Papagaio: Herda de Passaro.
+       * Adiciona características específicas de um papagaio.
+       */
+      class Papagaio extends Passaro {
+        /**
+         * Construtor da classe Papagaio.
+         * @param {boolean} sabeFalar - Indica se o papagaio sabe falar.
+         * @param {string} cor - Cor do papagaio.
+         * @param {number} tamanho - Tamanho do papagaio em cm.
+         * @param {number} peso - Peso do papagaio em gramas.
+         */
+        constructor(sabeFalar, cor, tamanho, peso) {
+          super("Médio", cor, tamanho, peso); // Define o bico como "Médio" por padrão e chama o construtor da classe Passaro.
+          this.sabeFalar = sabeFalar; // Indica se o papagaio sabe falar (true ou false).
+        }
+
+        /**
+         * Método específico para papagaios: Falar.
+         * Exibe uma mensagem no console indicando que o papagaio está falando.
+         */
+        falar() {
+          console.log("Falar");
+        }
+      }
+
+      // Criando instâncias da classe Papagaio com diferentes propriedades.
+      let papagaio = new Papagaio(true, "verde", 25, 350); // Um papagaio que sabe falar.
+      console.log(papagaio);
+
+      let papagaio2 = new Papagaio(false, "branco", 10, 80); // Um papagaio que não sabe falar.
+      console.log(papagaio2);
+    </script>
+  </head>
+  <body>
+    <h1>Exemplo de Herança com Parâmetros</h1>
+    <p>Abra o console do navegador para ver os resultados.</p>
+    <div id="output"></div>
+  </body>
+</html>

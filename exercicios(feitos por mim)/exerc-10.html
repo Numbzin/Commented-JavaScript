@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Crie uma classe chamada Sofá que atenda às seguintes especificações:
+
+      // Propriedades:
+
+      // cor (string): indica a cor do sofá.
+      // qtd_lugares (número): define a quantidade de lugares disponíveis no sofá.
+      // reclinavel (booleano): determina se o sofá é reclinável.
+
+      // Método:
+
+      // Implemente um método chamado reclinarSofa. Este método deve:
+      // Verificar se o sofá é reclinável (reclinavel).
+      // Se for reclinável, exiba a mensagem: "O sofá de cor [cor] reclinou.".
+      // Caso contrário, exiba a mensagem: "O sofá de cor [cor] não é reclinável.".
+      // Exemplo de uso:
+
+      // Crie ao menos 3 objetos diferentes da classe Sofá, com combinações variadas de valores para as propriedades.
+      // Para cada objeto, utilize o método reclinarSofa para verificar se ele pode ou não reclinar.
+
+      // Sofa
+
+      class Sofa {
+        /**
+         * Construtor da classe Sofa.
+         * @param {number} qtde_lugares - Quantidade de lugares no sofá.
+         * @param {boolean} reclinavel - Indica se o sofá é reclinável.
+         * @param {string} cor - Cor do sofá.
+         */
+        constructor(qtde_lugares, reclinavel, cor) {
+          this.qtde_lugares = qtde_lugares; // Número de lugares
+          this.reclinavel = reclinavel; // Sofá é reclinável?
+          this.cor = cor; // Cor do sofá
+        }
+
+        /**
+         * Método para reclinar o sofá, se ele for reclinável.
+         */
+        reclinarSofa() {
+          if (this.reclinavel) {
+            console.log(`O sofá de cor ${this.cor} reclinou.`);
+          } else {
+            console.log(`O sofá de cor ${this.cor} não é reclinável.`);
+          }
+        }
+      }
+
+      // Criando um array para armazenar os sofás
+      let sofasOO = [];
+      sofasOO.push(new Sofa(4, false, "azul"));
+      sofasOO.push(new Sofa(2, true, "vermelha"));
+
+      // Testando se os sofás são reclináveis
+      sofasOO[0].reclinarSofa(); // Não é reclinável
+      sofasOO[1].reclinarSofa(); // É reclinável
+
+      // Adicionando um novo sofá
+      sofasOO.push(new Sofa(3, false, "verde"));
+      sofasOO[2].reclinarSofa(); // Não é reclinável
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de Bicicletas</title>
+
+    <script>
+      /**
+       * Objeto literal: Bicicleta1
+       * Representa uma bicicleta específica com propriedades e métodos fixos.
+       */
+      let Bicicleta1 = {
+        cor: "Branca", // Cor da bicicleta.
+        marcha: "única", // Tipo de marcha.
+        aro: 12, // Tamanho do aro.
+        pedalar() {
+          console.log("Método pedalar executado"); // Método que simula a ação de pedalar.
+        },
+      };
+
+      /**
+       * Objeto literal: Bicicleta2
+       * Outro exemplo de bicicleta, com valores diferentes das propriedades.
+       */
+      let Bicicleta2 = {
+        cor: "Vermelha",
+        marcha: "18",
+        aro: 26,
+        pedalar() {
+          console.log("Método pedalar executado");
+        },
+      };
+
+      // Exibe os dois objetos no console
+      console.log(Bicicleta1);
+      console.log(Bicicleta2);
+
+      //---------------------------------------
+      /**
+       * Função fábrica: BicicletaFactory
+       * Cria objetos do tipo bicicleta com valores dinâmicos.
+       * @param {string} cor - Cor da bicicleta.
+       * @param {string} marcha - Tipo de marcha da bicicleta.
+       * @param {number} aro - Tamanho do aro da bicicleta.
+       * @returns {object} - Um novo objeto representando uma bicicleta.
+       */
+      let BicicletaFactory = function (cor, marcha, aro) {
+        return {
+          cor, // Cor da bicicleta.
+          marcha, // Tipo de marcha.
+          aro, // Tamanho do aro.
+          pedalar() {
+            console.log("Método pedalar executado");
+          },
+        };
+      };
+
+      // Criando bicicletas usando a função fábrica
+      let Bicicleta3 = BicicletaFactory("Vermelha", "18", 26);
+      console.log(Bicicleta3);
+
+      let Bicicleta4 = BicicletaFactory("Preta", "21", 29);
+      console.log(Bicicleta4);
+
+      // Exemplos de uso (descomente para testar)
+      // console.log(`Cor: ${Bicicleta3.cor}`);
+      // Bicicleta3.pedalar();
+    </script>
+  </head>
+  <body>
+    <!-- Apenas saída no console -->
+  </body>
+</html>

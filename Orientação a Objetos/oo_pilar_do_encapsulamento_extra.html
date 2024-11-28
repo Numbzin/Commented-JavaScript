@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script>
+      class Impressora {
+        constructor() {
+          this._cor = "preta";
+          this._multifuncional = true;
+        }
+
+        get cor() {
+          return this._cor;
+        }
+
+        get multifuncional() {
+          return this._multifuncional;
+        }
+
+        set cor(cor) {
+          this._cor = cor;
+        }
+
+        set multifuncional(multifuncional) {
+          this._multifuncional = multifuncional;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
