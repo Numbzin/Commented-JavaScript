@@ -7,20 +7,22 @@ Para uma documentação completa sobre JavaScript, consulte o [W3Schools JavaScr
 
 ## Estrutura do Repositório
 
-O repositório é organizado nas seguintes pastas:
+O repositório está organizado nas seguintes pastas:
 
-- **arquivos aula**: Contém códigos de aulas, onde conceitos básicos de JavaScript são introduzidos.
-- **array**: Exemplos e exercícios relacionados a arrays em JavaScript, incluindo manipulações e métodos.
-- **BOM**: Códigos relacionados ao Browser Object Model, que permitem interações com o navegador, como manipulação da janela e histórico.
-- **desafios**: Desafios de programação que ajudam a solidificar o entendimento dos conceitos aprendidos.
-- **DOM**: Exemplos de manipulação do DOM (Document Object Model), mostrando como interagir com elementos HTML usando JavaScript.
-- **eventos**: Códigos que demonstram como lidar com eventos em JavaScript, como cliques de botão e entradas de teclado.
-- **exercicios**: Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
-- **funcoes**: Exemplos de funções, incluindo funções anônimas, funções de callback e funções com parâmetros.
-- **operadores**: Demonstrações do uso de operadores aritméticos, lógicos e de comparação em JavaScript.
-- **projetos**: Pequenos projetos que utilizam conceitos de JavaScript, permitindo a aplicação prática do que foi aprendido.
-- **repeticao**: Exemplos de estruturas de repetição, como `for`, `while` e `do...while`, mostrando como iterar sobre dados.
-- **variaveis**: Códigos que mostram a declaração e o uso de variáveis em JavaScript, incluindo tipos de dados.
+- [**Arquivos Aula**](./arquivos_aula): Contém códigos de aulas, onde conceitos básicos de JavaScript são introduzidos.
+- [**Array**](./array): Exemplos e exercícios relacionados a arrays em JavaScript, incluindo manipulações e métodos.
+- [**BOM**](./BOM): Códigos relacionados ao Browser Object Model, que permitem interações com o navegador, como manipulação da janela e histórico.
+- [**Desafios**](./desafios): Desafios de programação que ajudam a solidificar o entendimento dos conceitos aprendidos.
+- [**DOM**](./DOM): Exemplos de manipulação do DOM (Document Object Model), mostrando como interagir com elementos HTML usando JavaScript.
+- [**Eventos**](./eventos): Códigos que demonstram como lidar com eventos em JavaScript, como cliques de botão e entradas de teclado.
+- [**Exercícios**](./exercicios): Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
+- [**Funções**](./funcoes): Exemplos de funções, incluindo funções anônimas, funções de callback e funções com parâmetros.
+- [**Operadores**](./operadores): Demonstrações do uso de operadores aritméticos, lógicos e de comparação em JavaScript.
+- [**Orientação a Objetos**](./orientacao_a_objetos): Conceitos e exemplos de orientação a objetos em JavaScript.
+- [**Projetos**](./projetos): Pequenos projetos que utilizam conceitos de JavaScript, permitindo a aplicação prática do que foi aprendido.
+- [**Repetição**](./repeticao): Exemplos de estruturas de repetição, como `for`, `while` e `do...while`, mostrando como iterar sobre dados.
+- [**Switch**](./switch): Exemplos do uso da estrutura de controle `switch`.
+- [**Variáveis**](./variaveis): Códigos que mostram a declaração e o uso de variáveis em JavaScript, incluindo tipos de dados.
 
 ## Como Usar
 
