@@ -15,7 +15,7 @@ O repositório está organizado nas seguintes pastas:
 - [**Desafios**](./desafios): Desafios de programação que ajudam a solidificar o entendimento dos conceitos aprendidos.
 - [**DOM**](./DOM): Exemplos de manipulação do DOM (Document Object Model), mostrando como interagir com elementos HTML usando JavaScript.
 - [**Eventos**](./eventos): Códigos que demonstram como lidar com eventos em JavaScript, como cliques de botão e entradas de teclado.
-- [**Exercícios**](./exercicios(feitos por mim)): Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
+- [**Exercícios**]((./exercicios(feitos por mim)): Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
 - [**Funções**](./funcoes): Exemplos de funções, incluindo funções anônimas, funções de callback e funções com parâmetros.
 - [**Operadores**](./operadores): Demonstrações do uso de operadores aritméticos, lógicos e de comparação em JavaScript.
 - [**Orientação a Objetos**](./orientacao_a_objetos): Conceitos e exemplos de orientação a objetos em JavaScript.
