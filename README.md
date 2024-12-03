@@ -8,14 +8,14 @@ Para uma documentação completa sobre JavaScript, consulte o [W3Schools JavaScr
 ## Estrutura do Repositório
 
 O repositório está organizado nas seguintes pastas:
-
+- [**PDF Com Exercicios e Desafios**](./@PDF_EXERCICIOS_DESAFIOS): Contém 50 Exercicios e 50 Desafios.
 - [**Arquivos Aula**](./arquivos_aula): Contém códigos de aulas, onde conceitos básicos de JavaScript são introduzidos.
 - [**Array**](./array): Exemplos e exercícios relacionados a arrays em JavaScript, incluindo manipulações e métodos.
 - [**BOM**](./BOM): Códigos relacionados ao Browser Object Model, que permitem interações com o navegador, como manipulação da janela e histórico.
 - [**Desafios**](./desafios): Desafios de programação que ajudam a solidificar o entendimento dos conceitos aprendidos.
 - [**DOM**](./DOM): Exemplos de manipulação do DOM (Document Object Model), mostrando como interagir com elementos HTML usando JavaScript.
 - [**Eventos**](./eventos): Códigos que demonstram como lidar com eventos em JavaScript, como cliques de botão e entradas de teclado.
-- [**Exercícios**](./exercicios): Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
+- [**Exercícios**](./exercicios(feitos por mim)): Exercícios práticos que cobrem uma variedade de tópicos em JavaScript.
 - [**Funções**](./funcoes): Exemplos de funções, incluindo funções anônimas, funções de callback e funções com parâmetros.
 - [**Operadores**](./operadores): Demonstrações do uso de operadores aritméticos, lógicos e de comparação em JavaScript.
 - [**Orientação a Objetos**](./orientacao_a_objetos): Conceitos e exemplos de orientação a objetos em JavaScript.
