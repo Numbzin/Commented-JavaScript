@@ -19,7 +19,7 @@ O repositório está organizado nas seguintes pastas:
 - [**Funções**](./funcoes): Exemplos de funções, incluindo funções anônimas, funções de callback e funções com parâmetros.
 - [**Operadores**](./operadores): Demonstrações do uso de operadores aritméticos, lógicos e de comparação em JavaScript.
 - [**Orientação a Objetos**](./orientacao_a_objetos): Conceitos e exemplos de orientação a objetos em JavaScript.
-- [**Projetos**](./projetos): Pequenos projetos que utilizam conceitos de JavaScript, permitindo a aplicação prática do que foi aprendido.
+- [**Projetos**](./Projetos): Pequenos projetos que utilizam conceitos de JavaScript, permitindo a aplicação prática do que foi aprendido.
 - [**Repetição**](./repeticao): Exemplos de estruturas de repetição, como `for`, `while` e `do...while`, mostrando como iterar sobre dados.
 - [**Switch**](./switch): Exemplos do uso da estrutura de controle `switch`.
 - [**Variáveis**](./variaveis): Códigos que mostram a declaração e o uso de variáveis em JavaScript, incluindo tipos de dados.
